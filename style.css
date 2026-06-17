@@ -2327,6 +2327,12 @@ footer .logo {
   .flow-card-image {
     height: 180px !important;
   }
+
+  /* Preconditions grid layout override on mobile */
+  .conditions-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
 }
 
 @media (max-width: 375px) {

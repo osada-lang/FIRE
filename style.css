@@ -1065,6 +1065,8 @@ footer .logo {
     height: auto;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
   .hero-bg-img {
@@ -1103,6 +1105,8 @@ footer .logo {
     margin-top: 48px;
     width: 100%;
     align-items: center;
+    padding: 0 24px;
+    box-sizing: border-box;
   }
   .floating-badge {
     position: static;
@@ -1458,6 +1462,21 @@ footer .logo {
 }
 
 @media (max-width: 576px) {
+  .header-container {
+    padding: 0 16px;
+  }
+  .logo {
+    font-size: 15px;
+  }
+  .btn-header {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+  nav a {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
   .hero p {
     font-size: 14px;
   }

@@ -2131,12 +2131,12 @@ footer .logo {
 
 /* Common Price Banner */
 .common-price-banner {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 248, 255, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 248, 255, 0.95) 100%);
   border-radius: var(--radius-lg);
   border: 2px solid var(--accent);
   box-shadow: var(--shadow);
-  padding: 32px 40px;
-  max-width: 900px;
+  padding: 36px 40px;
+  max-width: 1000px;
   margin: 0 auto 40px auto;
   text-align: center;
   position: relative;
@@ -2144,45 +2144,64 @@ footer .logo {
 }
 
 .common-price-banner .price-header {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 800;
   color: var(--primary-dark);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 20px;
+  letter-spacing: 0.12em;
+  margin-bottom: 24px;
 }
 
 .common-price-banner .price-details {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: start;
 }
 
 .common-price-banner .price-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  padding: 0 8px;
+}
+
+.common-price-banner .price-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: var(--accent-soft);
 }
 
 .common-price-banner .price-label {
   font-size: 13px;
   color: var(--text-muted);
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .common-price-banner .price-value {
-  font-size: 38px;
+  font-size: 32px;
   font-weight: 900;
   color: var(--primary);
   line-height: 1.1;
   display: flex;
   align-items: baseline;
+  justify-content: center;
 }
 
 .common-price-banner .price-unit {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   margin-left: 2px;
 }
@@ -2190,14 +2209,9 @@ footer .logo {
 .common-price-banner .price-tax {
   font-size: 11px;
   color: var(--text-muted);
-  margin-top: 4px;
+  margin-top: 6px;
   font-weight: 700;
-}
-
-.common-price-banner .price-divider {
-  width: 2px;
-  height: 60px;
-  background: var(--accent-soft);
+  line-height: 1.4;
 }
 
 .common-price-banner .price-badge {
@@ -2213,20 +2227,46 @@ footer .logo {
   box-shadow: var(--shadow-sm);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .common-price-banner {
-    padding: 24px;
+    max-width: 700px;
   }
   .common-price-banner .price-details {
-    flex-direction: column;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 20px;
   }
-  .common-price-banner .price-divider {
-    width: 60px;
-    height: 2px;
+  .common-price-banner .price-item:not(:last-child)::after {
+    display: none;
+  }
+  .common-price-banner .price-label {
+    height: auto;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  .common-price-banner {
+    padding: 24px 16px;
+  }
+  .common-price-banner .price-details {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .common-price-banner .price-item:not(:last-child)::after {
+    display: block;
+    content: "";
+    position: absolute;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    top: auto;
+    width: 50px;
+    height: 1px;
+    background: var(--accent-soft);
   }
   .common-price-banner .price-value {
-    font-size: 32px;
+    font-size: 28px;
   }
   .common-price-banner .price-badge {
     top: 8px;

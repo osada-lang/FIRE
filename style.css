@@ -207,6 +207,12 @@ nav a:hover {
   gap: 16px;
 }
 
+.cta-group .btn-primary,
+.cta-group .btn-secondary {
+  font-size: 15px;
+  padding: 14px 28px;
+}
+
 .btn-primary {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
   color: var(--white);
@@ -1067,6 +1073,14 @@ footer .logo {
 }
 
 @media (max-width: 576px) {
+  .cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 12px;
+  }
   .scheme-steps {
     grid-template-columns: 1fr;
   }

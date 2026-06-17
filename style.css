@@ -1099,6 +1099,7 @@ footer .logo {
   }
   .floating-badge-container {
     position: static;
+    transform: none;
     display: flex;
     flex-direction: column;
     gap: 16px;

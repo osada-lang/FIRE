@@ -149,7 +149,7 @@ nav a:hover {
   top: 0;
   width: 50%;
   height: 100%;
-  background-image: url('assets/images/danang_resort_vibe.png');
+  background-image: url('assets/luxury_condo_pool.png');
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -258,13 +258,18 @@ nav a:hover {
 }
 
 .floating-badge-1 {
-  bottom: 80px;
-  right: 45%;
+  bottom: 150px;
+  right: 42%;
 }
 
 .floating-badge-2 {
   top: 150px;
   right: 5%;
+}
+
+.floating-badge-3 {
+  bottom: 220px;
+  right: 8%;
 }
 
 .badge-icon {
@@ -736,6 +741,18 @@ footer .logo {
 
 /* Responsive */
 @media (max-width: 992px) {
+  .hero {
+    background: linear-gradient(135deg, rgba(10, 34, 64, 0.92) 0%, rgba(0, 50, 80, 0.88) 100%), url('assets/luxury_condo_pool.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding-top: 140px;
+    padding-bottom: 80px;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
   .hero-bg-img {
     display: none;
   }
@@ -743,15 +760,74 @@ footer .logo {
     width: 100%;
     text-align: center;
   }
+  .hero h1 {
+    color: var(--white);
+  }
+  .hero h1 span {
+    background: linear-gradient(90deg, #90e0ef 0%, #00b4d8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .hero p {
+    color: rgba(255, 255, 255, 0.85);
     margin-left: auto;
     margin-right: auto;
+  }
+  .tagline {
+    background: rgba(0, 180, 216, 0.15);
+    color: #90e0ef;
+    border-color: rgba(0, 180, 216, 0.3);
   }
   .cta-group {
     justify-content: center;
   }
+  .floating-badge-container {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 48px;
+    width: 100%;
+    align-items: center;
+  }
   .floating-badge {
-    display: none;
+    position: static;
+    width: 100%;
+    max-width: 480px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 14px 20px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    text-align: left;
+  }
+  .floating-badge h4 {
+    color: var(--white);
+    font-size: 15px;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+  .floating-badge p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    margin: 0;
+  }
+  .badge-icon {
+    background: rgba(255, 255, 255, 0.1);
+    color: #90e0ef;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
   }
   .pain-sol-wrapper {
     grid-template-columns: 1fr;

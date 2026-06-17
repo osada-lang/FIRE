@@ -2242,6 +2242,21 @@ footer .logo {
     height: auto;
     margin-bottom: 6px;
   }
+
+  /* Substance Flow Intro Responsive Adjustment */
+  .substance-intro {
+    flex-direction: column;
+    gap: 0;
+  }
+  .substance-intro-image {
+    width: 100%;
+    height: 280px;
+    min-height: auto;
+  }
+  .substance-intro-content {
+    width: 100%;
+    padding: 32px 24px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -2273,6 +2288,71 @@ footer .logo {
     right: -40px;
     font-size: 9px;
   }
+
+  /* Visual Images Height Optimization for Mobile Viewports */
+  .inheritance-visual,
+  .compound-visual,
+  .school-intro-image,
+  .about-proposal-image,
+  .substance-intro-image {
+    height: 200px !important;
+  }
+
+  /* Padding Adjustments to Optimize Screen Space */
+  .plan-card,
+  .detail-card-body,
+  .tour-card,
+  .contact-wrapper,
+  .substance-intro-content {
+    padding: 24px 16px !important;
+  }
+
+  .trouble-card {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 16px !important;
+  }
+  .trouble-card-icon {
+    margin-bottom: 0;
+  }
+
+  .faq-question {
+    padding: 20px 16px !important;
+  }
+  .faq-answer p,
+  .faq-answer ol {
+    padding: 0 16px 20px 16px !important;
+  }
+
+  .flow-card-image {
+    height: 180px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .btn-header {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+  .logo {
+    font-size: 16px;
+  }
+}
+
+/* Custom Scrollbar and Momentum Scrolling for Horizontal Tables */
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table-container::-webkit-scrollbar {
+  height: 6px;
+}
+.table-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.02);
+}
+.table-container::-webkit-scrollbar-thumb {
+  background: var(--accent-soft);
+  border-radius: 3px;
 }
 
 

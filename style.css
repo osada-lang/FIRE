@@ -1092,6 +1092,80 @@ footer .logo {
   }
 }
 
+/* Inheritance Section (10-Year Rule) */
+.inheritance-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+  margin-top: 40px;
+}
+
+.inheritance-visual {
+  width: 45%;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.inheritance-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.inheritance-wrapper:hover .inheritance-visual img {
+  transform: scale(1.03);
+}
+
+.inheritance-info {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Compound Section (Non-Tax Interest) */
+.compound-wrapper {
+  display: flex;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--accent);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 60px;
+  align-items: stretch;
+}
+
+.compound-visual {
+  width: 38%;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.compound-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.compound-wrapper:hover .compound-visual img {
+  transform: scale(1.03);
+}
+
+.compound-content {
+  padding: 40px;
+  width: 62%;
+  display: flex;
+  flex-direction: column;
+}
+
 /* School Section */
 .school-intro-wrapper {
   display: flex;
@@ -1156,6 +1230,30 @@ footer .logo {
 }
 
 @media (max-width: 992px) {
+  .inheritance-wrapper {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .inheritance-visual {
+    width: 100%;
+    height: 360px;
+  }
+  .inheritance-info {
+    width: 100%;
+  }
+
+  .compound-wrapper {
+    flex-direction: column;
+  }
+  .compound-visual {
+    width: 100%;
+    height: 360px;
+  }
+  .compound-content {
+    width: 100%;
+    padding: 32px 24px;
+  }
+
   .school-intro-wrapper {
     flex-direction: column;
   }

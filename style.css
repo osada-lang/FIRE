@@ -1266,4 +1266,20 @@ footer .logo {
   }
 }
 
+/* Simulation Section Grid */
+.simulation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: stretch;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 992px) {
+  .simulation-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
 

@@ -73,60 +73,47 @@
   </section>
 
   <!-- Trouble & Sympathy Section -->
-  <section id="trouble" class="fade-in" style="background: var(--bg-light);">
+  <section id="trouble" class="fade-in" style="background: var(--bg-light); padding: 80px 0;">
     <div class="container">
       <div class="section-title">
         <h2>このようなことでお困りではありませんか？</h2>
-        <p>仮想通貨（暗号資産）が爆上がりし、大きな含み益を抱えた富裕層の皆様から、日々多く寄せられる切実な悩みです。</p>
+        <p>仮想通貨（暗号資産）で莫大な含み益を抱えた富裕層の皆様から寄せられる、避けては通れない2つの切実な壁です。</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px;" class="pain-sol-wrapper">
-        <!-- Trouble Card 1 -->
-        <div style="background: var(--white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--glass-border); box-shadow: var(--shadow); display: flex; gap: 20px; align-items: flex-start;">
-          <div style="background: #fff0f3; color: #ff4d6d; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;">
-            <i class="fa-solid fa-calculator"></i>
-          </div>
-          <div>
-            <h4 style="font-size: 18px; color: var(--primary-dark); margin-bottom: 8px; font-weight: 700;">日本で利確すると最大55%課税</h4>
-            <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">仮想通貨が数千万円〜数億円規模に爆上がりしたが、日本国内で日本円（または他通貨）に利確した瞬間に、雑所得として最大55%の所得税・住民税が課され、半分以上が失われてしまう。</p>
+      <div class="trouble-wrapper">
+        <!-- Left Column: Visual Image -->
+        <div class="trouble-image-container">
+          <img src="assets/worried_wealthy_couple.png" alt="重い税金の壁に頭を抱える富裕層夫婦" class="trouble-image">
+          <div class="image-overlay-badge">
+            <i class="fa-solid fa-triangle-exclamation"></i> 日本国内での課税リスク
           </div>
         </div>
 
-        <!-- Trouble Card 2 -->
-        <div style="background: var(--white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--glass-border); box-shadow: var(--shadow); display: flex; gap: 20px; align-items: flex-start;">
-          <div style="background: #fff0f3; color: #ff4d6d; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;">
-            <i class="fa-solid fa-hourglass-half"></i>
+        <!-- Right Column: Simplified Pain Cards -->
+        <div class="trouble-cards-container">
+          <!-- Trouble Card 1 -->
+          <div class="trouble-card">
+            <div class="trouble-card-badge">壁 01</div>
+            <div class="trouble-card-icon"><i class="fa-solid fa-calculator"></i></div>
+            <div class="trouble-card-body">
+              <h4>日本で利確すると<span class="highlight-red">最大55%</span>課税</h4>
+              <p>仮想通貨が数千万円〜数億円規模に値上がりしても、日本国内で利確（日本円や他通貨への交換）した瞬間に、雑所得として最大55%の所得税・住民税が課され、築いた資産の半分以上が失われます。</p>
+            </div>
           </div>
-          <div>
-            <h4 style="font-size: 18px; color: var(--primary-dark); margin-bottom: 8px; font-weight: 700;">次世代への相続・贈与も最大55%</h4>
-            <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">「せめて子供にこの資産を引き継ぎたい」と考えても、日本の重い贈与税・相続税によって再び最大55%の税金が課され、二世代での手残りは元の資産のわずか28.9%にまで目減りしてしまう。</p>
-          </div>
-        </div>
 
-        <!-- Trouble Card 3 -->
-        <div style="background: var(--white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--glass-border); box-shadow: var(--shadow); display: flex; gap: 20px; align-items: flex-start;">
-          <div style="background: #fff0f3; color: #ff4d6d; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;">
-            <i class="fa-solid fa-building-columns"></i>
-          </div>
-          <div>
-            <h4 style="font-size: 18px; color: var(--primary-dark); margin-bottom: 8px; font-weight: 700;">ドバイやシンガポールは維持費が高すぎる</h4>
-            <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">税金対策としてドバイやシンガポールへの移住を検討したが、ビザ維持手数料（年150万〜数百万円）や家賃・物価があまりにも高騰しており、生活費で結局手残りが大きく削られてしまう。</p>
-          </div>
-        </div>
-
-        <!-- Trouble Card 4 -->
-        <div style="background: var(--white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--glass-border); box-shadow: var(--shadow); display: flex; gap: 20px; align-items: flex-start;">
-          <div style="background: #fff0f3; color: #ff4d6d; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;">
-            <i class="fa-solid fa-circle-exclamation"></i>
-          </div>
-          <div>
-            <h4 style="font-size: 18px; color: var(--primary-dark); margin-bottom: 8px; font-weight: 700;">海外移住での税務署否認と現地生活への不安</h4>
-            <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">「ペーパー移住」とみなされて日本の税務署に後から否認・追徴されるリスクや、本当に現地の海外生活（子供の英語教育環境、怪我や病気時の高度医療サービス）をスムーズに立ち上げられるかが不安。</p>
+          <!-- Trouble Card 2 -->
+          <div class="trouble-card">
+            <div class="trouble-card-badge">壁 02</div>
+            <div class="trouble-card-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+            <div class="trouble-card-body">
+              <h4>次世代への相続・贈与も<span class="highlight-red">最大55%</span></h4>
+              <p>「せめて子供にこの資産を引き継ぎたい」と考えても、日本の重い贈与税・相続税（最高税率55%）の対象となり、何もしなければ二世代で手元に残る資産はわずか28.9%にまで激減してしまいます。</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div style="margin-top: 48px; text-align: center;">
+      <div style="margin-top: 56px; text-align: center;">
         <p style="font-size: 15px; font-weight: 700; color: var(--primary-dark); margin-bottom: 16px;">
           <i class="fa-solid fa-arrow-down" style="color: var(--primary-light); margin-right: 8px;"></i> 
           これらの悩みをスマートにクリアし、「確実な資産保全」と「最高のリゾート地での生活」を同時に手に入れるスキームがありますが、そこには一つ大きな落とし穴があります。

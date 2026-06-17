@@ -415,10 +415,17 @@ nav a:hover {
 /* Plans Section */
 .plans-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 960px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .plans-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+  }
 }
 
 .plan-card {

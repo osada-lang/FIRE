@@ -1267,32 +1267,42 @@ footer .logo {
 }
 
 /* Simulation Section Grid */
-.simulation-grid {
+.simulation-grid-3 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
   align-items: stretch;
   margin-bottom: 40px;
 }
 
-.simulation-grid > div {
+.simulation-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  align-items: stretch;
+  margin-bottom: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.simulation-grid-3 > div,
+.simulation-grid-2 > div {
   padding: 32px 20px !important;
 }
 
-@media (max-width: 1200px) {
-  .simulation-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-  .simulation-grid > div {
-    padding: 40px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .simulation-grid {
+@media (max-width: 992px) {
+  .simulation-grid-3 {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+  .simulation-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .simulation-grid-3 > div,
+  .simulation-grid-2 > div {
+    padding: 40px !important;
   }
 }
 

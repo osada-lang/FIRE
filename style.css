@@ -414,6 +414,80 @@ nav a:hover {
   margin: 0;
 }
 
+/* About Proposal Box Style */
+.about-proposal-wrapper {
+  margin-top: 56px;
+  background: linear-gradient(135deg, var(--white) 0%, rgba(202, 240, 248, 0.15) 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow);
+  display: flex;
+  overflow: hidden;
+  align-items: stretch;
+}
+
+.about-proposal-image {
+  width: 40%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.about-proposal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-proposal-content {
+  padding: 48px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.proposal-tag {
+  align-self: flex-start;
+  background: var(--primary-dark);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.about-proposal-content h3 {
+  font-size: 24px;
+  color: var(--primary-dark);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.about-proposal-content p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 0px;
+}
+
+.about-to-charm-arrow {
+  border-top: 1px solid var(--accent-soft);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.about-to-charm-arrow p {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin: 0;
+  line-height: 1.6;
+}
+
 /* Section Common Styles */
 .section-title {
   text-align: center;
@@ -978,6 +1052,17 @@ footer .logo {
   }
   .trouble-card-badge {
     left: 24px;
+  }
+  .about-proposal-wrapper {
+    flex-direction: column;
+  }
+  .about-proposal-image {
+    width: 100%;
+    height: 300px;
+  }
+  .about-proposal-content {
+    width: 100%;
+    padding: 32px 24px;
   }
 }
 

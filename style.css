@@ -242,9 +242,19 @@ nav a:hover {
 }
 
 /* Floating Badges */
-.floating-badge {
+.floating-badge-container {
   position: absolute;
-  background: rgba(255, 255, 255, 0.85);
+  right: 6%;
+  top: 52%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 3;
+}
+
+.floating-badge {
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
@@ -254,22 +264,14 @@ nav a:hover {
   display: flex;
   align-items: center;
   gap: 16px;
-  z-index: 3;
+  width: 380px;
+  transition: all 0.3s ease;
 }
 
-.floating-badge-1 {
-  bottom: 150px;
-  right: 42%;
-}
-
-.floating-badge-2 {
-  top: 150px;
-  right: 5%;
-}
-
-.floating-badge-3 {
-  bottom: 220px;
-  right: 8%;
+.floating-badge:hover {
+  transform: translateX(-5px);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-lg);
 }
 
 .badge-icon {

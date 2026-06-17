@@ -1079,6 +1079,44 @@ footer .logo {
 }
 
 /* School Section */
+.school-intro-wrapper {
+  display: flex;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 40px;
+  align-items: stretch;
+}
+
+.school-intro-content {
+  padding: 48px;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.school-intro-image {
+  width: 45%;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.school-intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.school-intro-wrapper:hover .school-intro-image img {
+  transform: scale(1.03);
+}
+
 .schools-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1104,6 +1142,18 @@ footer .logo {
 }
 
 @media (max-width: 992px) {
+  .school-intro-wrapper {
+    flex-direction: column;
+  }
+  .school-intro-image {
+    width: 100%;
+    height: 300px;
+  }
+  .school-intro-content {
+    width: 100%;
+    padding: 32px 24px;
+  }
+
   .schools-grid {
     grid-template-columns: 1fr;
   }
@@ -1699,17 +1749,46 @@ footer .logo {
 
 .infra-card {
   background: var(--white);
-  padding: 36px 28px;
+  padding: 0;
   border-radius: var(--radius-lg);
   border: 1px solid var(--accent-soft);
   box-shadow: var(--shadow-sm);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .infra-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow);
   border-color: var(--primary-light);
+}
+
+.infra-card-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.infra-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.infra-card:hover .infra-card-image img {
+  transform: scale(1.05);
+}
+
+.infra-card-content {
+  padding: 28px 24px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .infra-icon {
@@ -1722,7 +1801,7 @@ footer .logo {
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   transition: all 0.3s ease;
 }
 
@@ -1783,7 +1862,7 @@ footer .logo {
   }
 
   .infra-card {
-    padding: 32px 24px;
+    padding: 0;
   }
 }
 

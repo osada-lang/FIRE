@@ -27,6 +27,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -2458,6 +2459,125 @@ footer .logo {
   .flex-column-mobile {
     flex-direction: column;
     align-items: stretch !important;
+  }
+}
+
+/* ==========================================================================
+   Mobile Optimization Styles
+   ========================================================================== */
+
+/* PC表示では非表示にする要素 */
+.show-on-mobile {
+  display: none !important;
+}
+
+/* スマホ用アコーディオンボタンスタイル */
+.accordion-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background: var(--primary-light);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 800;
+  font-size: 13.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  transition: all 0.3s ease;
+}
+
+.accordion-btn:hover {
+  background: var(--primary);
+}
+
+@media (max-width: 992px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .show-on-mobile {
+    display: block !important;
+  }
+  .show-on-mobile-flex {
+    display: flex !important;
+  }
+
+  /* スマホ用アコーディオンコンテンツのトグルスタイル */
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .accordion-content.open {
+    max-height: 2500px; /* 十分な高さを確保 */
+    opacity: 1;
+    margin-top: 16px;
+  }
+
+  /* 【重要】イメージ画像がスマホの1画面を占拠するのを防ぐ高さ制限 */
+  .tour-gallery-item {
+    aspect-ratio: 16/9 !important; /* 横長にして高さを抑える */
+  }
+
+  /* お悩み夫婦・コンシェルジュ・生前贈与ファミリー・ヨットの画像コンテナの高さ制限 */
+  .inheritance-visual,
+  .compound-visual,
+  .school-intro-image,
+  .substance-intro-visual {
+    width: 100% !important;
+    height: 180px !important; /* 縦幅を180pxに固定制限し、画像とテキストをセットで1画面に収める */
+    min-height: 180px !important;
+  }
+
+  /* 各種カード内の画像ヘッダー（インフラカード、強み・リスク対策カードなど） */
+  .infra-card-image,
+  .detail-card-image {
+    height: 140px !important; /* 高さを140pxにコンパクト化 */
+    min-height: 140px !important;
+  }
+
+  /* ロードマップ（ステップ1〜3）の画像コンテナ */
+  .flow-image-container {
+    width: 100% !important;
+    height: 150px !important; /* 高さを150pxにコンパクト化 */
+    min-height: 150px !important;
+  }
+
+  /* 余白の最適化（1画面内での表示比率を上げるための余白削減） */
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  section {
+    padding: 48px 0 !important; /* セクション全体の上下の余白を縮小 */
+  }
+
+  /* スマホ表示時、かつ固定ヘッダー（.sticky）になっている場合のコンパクト化 */
+  header.sticky {
+    padding: 10px 0 !important; /* 上下パディングを16pxから10pxへ縮小 */
+  }
+  header.sticky .header-container {
+    gap: 8px !important;
+  }
+  header.sticky .logo {
+    font-size: 14.5px !important;
+  }
+  header.sticky .btn-header {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+  }
+  header.sticky nav {
+    padding: 2px 0 !important;
+    margin-top: 2px !important;
+  }
+  header.sticky nav a {
+    font-size: 11.5px !important;
+    padding: 4px 10px !important;
   }
 }
 

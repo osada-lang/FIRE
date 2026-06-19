@@ -64,23 +64,23 @@ section {
 
 /* Header */
 header {
-  position: absolute;
+  position: fixed; /* 常時固定 */
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
-  padding: 24px 0;
+  padding: 20px 0; /* スクロール前は少し広めのパディング */
+  background: rgba(255, 255, 255, 0.9); /* 白の半透明背景 */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid var(--glass-border); /* 境界線 */
   transition: var(--transition);
 }
 
 header.sticky {
-  position: fixed;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
-  padding: 16px 0;
-  border-bottom: 1px solid var(--glass-border);
+  padding: 12px 0; /* スクロール後はコンパクトに */
+  background: rgba(255, 255, 255, 0.95); /* 少し不透明度を上げる */
 }
 
 .header-container {
@@ -142,6 +142,7 @@ nav a:hover {
   background: linear-gradient(135deg, rgba(244,249,252,0.8) 0%, rgba(202,240,248,0.4) 100%);
   position: relative;
   overflow: hidden;
+  padding-top: 80px; /* 固定ヘッダー分の余白を確保し、コンテンツとの重なりを防止 */
 }
 
 .hero-bg-img {
@@ -2557,9 +2558,14 @@ footer .logo {
     padding: 48px 0 !important; /* セクション全体の上下の余白を縮小 */
   }
 
+  /* スマホ表示時のヘッダー余白設定 */
+  header {
+    padding: 12px 0 !important;
+  }
+
   /* スマホ表示時、かつ固定ヘッダー（.sticky）になっている場合のコンパクト化 */
   header.sticky {
-    padding: 10px 0 !important; /* 上下パディングを16pxから10pxへ縮小 */
+    padding: 8px 0 !important; /* さらにコンパクトにするため 8px に縮小 */
   }
   header.sticky .header-container {
     gap: 8px !important;

@@ -197,6 +197,16 @@ nav a:hover {
   -webkit-text-fill-color: transparent;
 }
 
+.hero-title-line {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .hero-title-line {
+    white-space: nowrap;
+  }
+}
+
 .hero p {
   font-size: 18px;
   color: var(--text-muted);

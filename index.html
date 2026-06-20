@@ -553,11 +553,11 @@
                   クイック選択（プリセット）
                 </label>
                 <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                  <button type="button" class="sim-preset-btn" onclick="setPreset(50000000)">5,000万円</button>
-                  <button type="button" class="sim-preset-btn active" onclick="setPreset(100000000)">1億円</button>
-                  <button type="button" class="sim-preset-btn" onclick="setPreset(200000000)">2億円</button>
-                  <button type="button" class="sim-preset-btn" onclick="setPreset(300000000)">3億円</button>
-                  <button type="button" class="sim-preset-btn" onclick="setPreset(500000000)">5億円</button>
+                  <button type="button" class="sim-preset-btn" data-value="50000000" onclick="setPreset(50000000)">5,000万円</button>
+                  <button type="button" class="sim-preset-btn active" data-value="100000000" onclick="setPreset(100000000)">1億円</button>
+                  <button type="button" class="sim-preset-btn" data-value="200000000" onclick="setPreset(200000000)">2億円</button>
+                  <button type="button" class="sim-preset-btn" data-value="300000000" onclick="setPreset(300000000)">3億円</button>
+                  <button type="button" class="sim-preset-btn" data-value="500000000" onclick="setPreset(500000000)">5億円</button>
                 </div>
               </div>
             </div>
@@ -1931,8 +1931,8 @@
       // Preset button active state
       const buttons = document.querySelectorAll('.sim-preset-btn');
       buttons.forEach(btn => {
-        const onclickAttr = btn.getAttribute('onclick') || "";
-        if (onclickAttr.includes(X.toString())) {
+        const btnVal = parseFloat(btn.getAttribute('data-value')) || 0;
+        if (btnVal === X) {
           btn.classList.add('active');
         } else {
           btn.classList.remove('active');

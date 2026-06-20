@@ -391,10 +391,11 @@
           <div style="display: flex; flex-direction: column; height: 100%;">
             <h3 style="color: #7a7a7a; margin-bottom: 16px; font-size: 20px; min-height: 56px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-xmark" style="color: #b33939;"></i> 日本国内で利確・贈与</h3>
             
-            <button class="simulation-detail-btn gray-btn" onclick="toggleSimAccordion(this)">
-              <span>内訳の詳細を見る</span> <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            
+            <div style="border-bottom: 2px dashed #dee2e6; padding-bottom: 20px; margin-bottom: 20px;">
+              <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px; min-height: 20px;">子孫へ引き継げる最終手残り額</p>
+              <h4 style="font-size: 28px; color: var(--text-main); font-weight: 800; min-height: 38px; line-height: 1.2;">約 2,425 万円 <span style="font-size: 12px; font-weight: 500; color: #b33939;">(手残り約24.3%)</span></h4>
+            </div>
+
             <div class="simulation-detail-content">
               <div style="padding-top: 16px;">
                 <div style="margin-bottom: 20px; min-height: 92px;">
@@ -415,10 +416,9 @@
               </div>
             </div>
             
-            <div style="border-top: 2px dashed #dee2e6; padding-top: 24px; margin-top: auto;">
-              <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px; min-height: 20px;">子孫へ引き継げる最終手残り額</p>
-              <h4 style="font-size: 28px; color: var(--text-main); font-weight: 800; min-height: 38px; line-height: 1.2;">約 2,425 万円 <span style="font-size: 12px; font-weight: 500; color: #b33939;">(手残り約24.3%)</span></h4>
-            </div>
+            <button class="simulation-detail-btn gray-btn" style="margin-top: auto;" onclick="toggleSimAccordion(this)">
+              <span>内訳の詳細を見る</span> <i class="fa-solid fa-chevron-down"></i>
+            </button>
           </div>
         </div>
 
@@ -428,10 +428,11 @@
           <div style="display: flex; flex-direction: column; height: 100%;">
             <h3 style="color: var(--primary-dark); margin-bottom: 16px; font-size: 20px; min-height: 56px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--primary-light);"></i> 3年・資産利確プラン（利確のみ）</h3>
             
-            <button class="simulation-detail-btn" onclick="toggleSimAccordion(this)">
-              <span>内訳の詳細を見る</span> <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            
+            <div style="border-bottom: 2px dashed var(--accent-soft); padding-bottom: 20px; margin-bottom: 20px;">
+              <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px; min-height: 20px;">子孫へ引き継げる最終手残り額</p>
+              <h4 style="font-size: 28px; color: var(--primary-dark); font-weight: 800; min-height: 38px; line-height: 1.2;">約 4,640 万円 <span style="font-size: 12px; font-weight: 500; color: var(--primary);">(手残り約46.4%)</span></h4>
+            </div>
+
             <div class="simulation-detail-content">
               <div style="padding-top: 16px;">
                 <div style="margin-bottom: 20px; min-height: 92px;">
@@ -452,10 +453,9 @@
               </div>
             </div>
             
-            <div style="border-top: 2px dashed var(--accent-soft); padding-top: 24px; margin-top: auto;">
-              <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px; min-height: 20px;">子孫へ引き継げる最終手残り額</p>
-              <h4 style="font-size: 28px; color: var(--primary-dark); font-weight: 800; min-height: 38px; line-height: 1.2;">約 4,640 万円 <span style="font-size: 12px; font-weight: 500; color: var(--primary);">(手残り約46.4%)</span></h4>
-            </div>
+            <button class="simulation-detail-btn" style="margin-top: auto;" onclick="toggleSimAccordion(this)">
+              <span>内訳の詳細を見る</span> <i class="fa-solid fa-chevron-down"></i>
+            </button>
           </div>
         </div>
 
@@ -465,10 +465,11 @@
           <div style="display: flex; flex-direction: column; height: 100%;">
             <h3 style="color: var(--primary-dark); margin-bottom: 16px; font-size: 20px; min-height: 56px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--primary-light);"></i> 10年・生前贈与プラン</h3>
             
-            <button class="simulation-detail-btn" onclick="toggleSimAccordion(this)">
-              <span>内訳の詳細を見る</span> <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            
+            <div style="border-bottom: 2px dashed var(--accent-soft); padding-bottom: 20px; margin-bottom: 20px;">
+              <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px; min-height: 20px;">子孫へ完全に引き継げる最終手残り額</p>
+              <h4 style="font-size: 28px; color: var(--primary-dark); font-weight: 800; min-height: 38px; line-height: 1.2;">約 8,800 万円 <span style="font-size: 12px; font-weight: 500; color: var(--primary);">(手残り約88.0%)</span></h4>
+            </div>
+
             <div class="simulation-detail-content">
               <div style="padding-top: 16px;">
                 <div style="margin-bottom: 20px; min-height: 92px;">
@@ -489,10 +490,9 @@
               </div>
             </div>
             
-            <div style="border-top: 2px dashed var(--accent-soft); padding-top: 24px; margin-top: auto;">
-              <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px; min-height: 20px;">子孫へ完全に引き継げる最終手残り額</p>
-              <h4 style="font-size: 28px; color: var(--primary-dark); font-weight: 800; min-height: 38px; line-height: 1.2;">約 8,800 万円 <span style="font-size: 12px; font-weight: 500; color: var(--primary);">(手残り約88.0%)</span></h4>
-            </div>
+            <button class="simulation-detail-btn" style="margin-top: auto;" onclick="toggleSimAccordion(this)">
+              <span>内訳の詳細を見る</span> <i class="fa-solid fa-chevron-down"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -698,10 +698,11 @@
               <div style="display: flex; flex-direction: column; height: 100%;">
                 <h3 style="color: #7a7a7a; margin-bottom: 24px; font-size: 22px; min-height: 56px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-xmark" style="color: #b33939;"></i> 日本国内で運用・贈与</h3>
                 
-                <button class="simulation-detail-btn gray-btn" onclick="toggleSimAccordion(this)">
-                  <span>内訳の詳細を見る</span> <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                
+                <div style="border-bottom: 2px dashed #dee2e6; padding-bottom: 20px; margin-bottom: 20px;">
+                  <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 20px;">子孫へ引き継げる最終手残り額</p>
+                  <h4 style="font-size: 28px; color: var(--text-main); font-weight: 800; min-height: 38px; line-height: 1.2;">約 4,840 万円 <span style="font-size: 12px; font-weight: 500; color: #b33939;">(元本割れ)</span></h4>
+                </div>
+
                 <div class="simulation-detail-content">
                   <div style="padding-top: 16px;">
                     <div style="margin-bottom: 20px; min-height: 92px;">
@@ -722,10 +723,9 @@
                   </div>
                 </div>
                 
-                <div style="border-top: 2px dashed #dee2e6; padding-top: 24px; margin-top: auto;">
-                  <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 20px;">子孫へ引き継げる最終手残り額</p>
-                  <h4 style="font-size: 28px; color: var(--text-main); font-weight: 800; min-height: 38px; line-height: 1.2;">約 4,840 万円 <span style="font-size: 12px; font-weight: 500; color: #b33939;">(元本割れ)</span></h4>
-                </div>
+                <button class="simulation-detail-btn gray-btn" style="margin-top: auto;" onclick="toggleSimAccordion(this)">
+                  <span>内訳の詳細を見る</span> <i class="fa-solid fa-chevron-down"></i>
+                </button>
               </div>
             </div>
 
@@ -735,10 +735,11 @@
               <div style="display: flex; flex-direction: column; height: 100%;">
                 <h3 style="color: var(--primary-dark); margin-bottom: 24px; font-size: 22px; min-height: 56px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--primary-light);"></i> 長期・非課税FIREプラン</h3>
                 
-                <button class="simulation-detail-btn" onclick="toggleSimAccordion(this)">
-                  <span>内訳の詳細を見る</span> <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                
+                <div style="border-bottom: 2px dashed var(--accent-soft); padding-bottom: 20px; margin-bottom: 20px;">
+                  <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px; min-height: 20px;">子孫へ完全に引き継げる最終手残り額</p>
+                  <h4 style="font-size: 28px; color: var(--primary-dark); font-weight: 800; min-height: 38px; line-height: 1.2;">約 2 億 4,100 万円 <span style="font-size: 12px; font-weight: 500; color: var(--primary);">(手残り約241.0%)</span></h4>
+                </div>
+
                 <div class="simulation-detail-content">
                   <div style="padding-top: 16px;">
                     <div style="margin-bottom: 20px; min-height: 92px;">
@@ -759,10 +760,9 @@
                   </div>
                 </div>
                 
-                <div style="border-top: 2px dashed var(--accent-soft); padding-top: 24px; margin-top: auto;">
-                  <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px; min-height: 20px;">子孫へ完全に引き継げる最終手残り額</p>
-                  <h4 style="font-size: 28px; color: var(--primary-dark); font-weight: 800; min-height: 38px; line-height: 1.2;">約 2 億 4,100 万円 <span style="font-size: 12px; font-weight: 500; color: var(--primary);">(手残り約241.0%)</span></h4>
-                </div>
+                <button class="simulation-detail-btn" style="margin-top: auto;" onclick="toggleSimAccordion(this)">
+                  <span>内訳の詳細を見る</span> <i class="fa-solid fa-chevron-down"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -1630,7 +1630,7 @@
 
     // Toggle simulation details accordion
     function toggleSimAccordion(btn) {
-      const content = btn.nextElementSibling;
+      const content = btn.parentElement.querySelector('.simulation-detail-content');
       const icon = btn.querySelector('i');
       const textSpan = btn.querySelector('span');
       

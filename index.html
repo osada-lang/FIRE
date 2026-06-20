@@ -2001,21 +2001,38 @@
 
     // Toggle simulation details accordion
     function toggleSimAccordion(btn) {
-      const content = btn.parentElement.querySelector('.simulation-detail-content');
-      const icon = btn.querySelector('i');
-      const textSpan = btn.querySelector('span');
+      const grid = btn.closest('.simulation-grid-3, .compound-grid');
+      if (!grid) return;
       
-      if (content.style.maxHeight === '0px' || !content.style.maxHeight || content.style.maxHeight === '0') {
-        content.style.maxHeight = content.scrollHeight + 'px';
-        content.style.opacity = '1';
-        if (icon) icon.style.transform = 'rotate(180deg)';
-        if (textSpan) textSpan.textContent = '内訳の詳細を閉じる';
-      } else {
-        content.style.maxHeight = '0px';
-        content.style.opacity = '0';
-        if (icon) icon.style.transform = 'rotate(0deg)';
-        if (textSpan) textSpan.textContent = '内訳の詳細を見る';
-      }
+      const contents = grid.querySelectorAll('.simulation-detail-content');
+      const buttons = grid.querySelectorAll('.simulation-detail-btn');
+      
+      const targetContent = btn.parentElement.querySelector('.simulation-detail-content');
+      if (!targetContent) return;
+      
+      const isOpening = targetContent.style.maxHeight === '0px' || !targetContent.style.maxHeight || targetContent.style.maxHeight === '0';
+      
+      contents.forEach(content => {
+        if (isOpening) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          content.style.opacity = '1';
+        } else {
+          content.style.maxHeight = '0px';
+          content.style.opacity = '0';
+        }
+      });
+      
+      buttons.forEach(button => {
+        const icon = button.querySelector('i');
+        const textSpan = button.querySelector('span');
+        if (isOpening) {
+          if (icon) icon.style.transform = 'rotate(180deg)';
+          if (textSpan) textSpan.textContent = '内訳の詳細を閉じる';
+        } else {
+          if (icon) icon.style.transform = 'rotate(0deg)';
+          if (textSpan) textSpan.textContent = '内訳の詳細を見る';
+        }
+      });
     }
   </script>
 </body>

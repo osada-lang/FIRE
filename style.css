@@ -2691,3 +2691,33 @@ footer .logo {
   transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
   opacity: 0;
 }
+
+/* Simulator Preset Buttons */
+.sim-preset-btn {
+  background: var(--white);
+  border: 1px solid var(--primary-light);
+  color: var(--primary);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.sim-preset-btn:hover {
+  background: var(--accent-soft);
+  color: var(--primary-dark);
+}
+.sim-preset-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
+
+.highlight-num {
+  font-family: 'Outfit', sans-serif;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--primary);
+  margin: 0 1px;
+}

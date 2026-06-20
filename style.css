@@ -191,6 +191,15 @@ nav a:hover {
   margin-bottom: 24px;
 }
 
+.hero-pre-title {
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
 .hero h1 span {
   background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary-light) 100%);
   -webkit-background-clip: text;
@@ -1231,6 +1240,10 @@ footer .logo {
   }
   .hero h1 {
     font-size: 28px;
+  }
+  .hero-pre-title {
+    font-size: 15px;
+    margin-bottom: 12px;
   }
 }
 

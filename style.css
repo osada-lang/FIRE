@@ -2628,3 +2628,47 @@ footer .logo {
     text-align: center !important;
   }
 }
+
+/* Simulation Accordion */
+.simulation-detail-btn {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--primary-dark);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  transition: all 0.3s ease;
+  outline: none;
+  margin-top: 8px;
+}
+.simulation-detail-btn i {
+  transition: transform 0.3s ease;
+}
+.simulation-detail-btn:hover {
+  background: rgba(0, 180, 216, 0.05);
+  border-color: var(--primary-light);
+}
+
+.simulation-detail-btn.gray-btn {
+  border-color: #dee2e6;
+  color: var(--text-muted);
+}
+.simulation-detail-btn.gray-btn:hover {
+  background: #f8f9fa;
+  border-color: #ced4da;
+  color: var(--text-main);
+}
+
+.simulation-detail-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  opacity: 0;
+}

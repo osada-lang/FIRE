@@ -2685,35 +2685,6 @@ footer .logo {
   color: var(--text-main);
 }
 
-/* PC/スマホでのアコーディオンボタンの表示切替 */
-/* PC表示（993px以上） */
-@media (min-width: 993px) {
-  /* 各カード内の個別ボタンを非表示にする */
-  .simulation-grid-3 .simulation-detail-btn:not(.simulation-detail-btn-common),
-  .compound-grid .simulation-detail-btn:not(.simulation-detail-btn-common) {
-    display: none !important;
-  }
-  /* 共通ボタンを表示する */
-  .simulation-detail-common-container {
-    display: block !important;
-  }
-  .simulation-detail-btn-common {
-    display: flex !important;
-  }
-}
-
-/* スマホ表示（992px以下） */
-@media (max-width: 992px) {
-  /* 共通ボタンのコンテナを非表示にする */
-  .simulation-detail-common-container {
-    display: none !important;
-  }
-  /* 各カード内の個別ボタンを表示する */
-  .simulation-grid-3 .simulation-detail-btn:not(.simulation-detail-btn-common),
-  .compound-grid .simulation-detail-btn:not(.simulation-detail-btn-common) {
-    display: flex !important;
-  }
-}
 
 .simulation-detail-content {
   max-height: 0;

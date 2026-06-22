@@ -903,40 +903,53 @@
         </div>
       </div>
 
-      <!-- Price Banner -->
-      <div class="common-price-banner" style="margin-top: 56px; margin-bottom: 24px;">
-        <div class="price-header">全パッケージ共通 料金・基本要件</div>
-        <div class="price-details">
-          <div class="price-item">
-            <span class="price-label">プラン初期費用</span>
-            <div class="price-value">300<span class="price-unit">万円</span></div>
-            <span class="price-tax">（税込）</span>
+      <!-- Common Price & Basic Requirements Accordion -->
+      <div id="common-price-accordion" style="margin-top: 56px; margin-bottom: 48px; border: 1px solid var(--accent); border-radius: var(--radius-lg); overflow: hidden; background: var(--white); box-shadow: var(--shadow); text-align: left;">
+        <button id="common-price-toggle-btn" style="width: 100%; padding: 24px 32px; background: rgba(0, 119, 182, 0.04); border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left; transition: var(--transition);" onclick="toggleCommonPriceAccordion()">
+          <span style="font-size: 18px; font-weight: 800; color: var(--primary-dark); display: flex; align-items: center; gap: 10px;">
+            <i class="fa-solid fa-file-invoice-dollar" style="color: var(--primary);"></i>
+            <span>全パッケージ共通 料金・基本要件（サービス費用内訳）</span>
+          </span>
+          <i class="fa-solid fa-chevron-down" style="font-size: 16px; color: var(--primary); transition: transform 0.3s ease;"></i>
+        </button>
+        
+        <div id="common-price-content" style="max-height: 0; overflow: hidden; transition: all 0.3s ease-in-out; opacity: 0; padding: 0 32px;">
+          <!-- Price Banner -->
+          <div class="common-price-banner" style="margin-top: 24px; margin-bottom: 24px; border: 1px solid var(--accent-soft); box-shadow: none;">
+            <div class="price-header">全パッケージ共通 料金・基本要件</div>
+            <div class="price-details">
+              <div class="price-item">
+                <span class="price-label">プラン初期費用</span>
+                <div class="price-value">300<span class="price-unit">万円</span></div>
+                <span class="price-tax">（税込）</span>
+              </div>
+              <div class="price-item">
+                <span class="price-label">月額運用代行費用</span>
+                <div class="price-value">$500<span class="price-unit">/月</span></div>
+                <span class="price-tax">（フルマネージド）</span>
+              </div>
+              <div class="price-item">
+                <span class="price-label">基本ビザ</span>
+                <div class="price-value">DT3</div>
+                <span class="price-tax">（家族帯同可 / 3年ごと更新・半永久滞在可）</span>
+              </div>
+              <div class="price-item">
+                <span class="price-label">必要プール資金（出資金）</span>
+                <div class="price-value">約1,800<span class="price-unit">万円</span></div>
+                <span class="price-tax">（30億VND以上・経費差引後返還）</span>
+              </div>
+            </div>
+            <div class="price-badge">共通要件</div>
           </div>
-          <div class="price-item">
-            <span class="price-label">月額運用代行費用</span>
-            <div class="price-value">$500<span class="price-unit">/月</span></div>
-            <span class="price-tax">（フルマネージド）</span>
-          </div>
-          <div class="price-item">
-            <span class="price-label">基本ビザ</span>
-            <div class="price-value">DT3</div>
-            <span class="price-tax">（家族帯同可 / 3年ごと更新・半永久滞在可）</span>
-          </div>
-          <div class="price-item">
-            <span class="price-label">必要プール資金（出資金）</span>
-            <div class="price-value">約1,800<span class="price-unit">万円</span></div>
-            <span class="price-tax">（30億VND以上・経費差引後返還）</span>
+
+          <!-- DT4 Note -->
+          <div style="margin-bottom: 24px; background: rgba(0, 180, 216, 0.05); border: 1px solid var(--accent-soft); padding: 20px 24px; border-radius: var(--radius-lg); text-align: left; max-width: 1000px; margin-left: auto; margin-right: auto;">
+            <p style="font-size: 13.5px; color: var(--text-main); line-height: 1.6; margin: 0;">
+              <strong style="color: var(--primary-dark);"><i class="fa-solid fa-circle-info"></i> プール資金（出資金）を節約したい単身の方向けのオプション</strong><br>
+              単身移住でプール資金を約300万円（通常約1,800万円）に抑えたい場合、1年更新・家族帯同不可の「DT4ビザスキーム」も選択可能です。
+            </p>
           </div>
         </div>
-        <div class="price-badge">共通要件</div>
-      </div>
-
-      <!-- DT4 Note -->
-      <div style="margin-bottom: 48px; background: rgba(0, 180, 216, 0.05); border: 1px solid var(--accent-soft); padding: 20px 24px; border-radius: var(--radius-lg); text-align: left; max-width: 1000px; margin-left: auto; margin-right: auto;">
-        <p style="font-size: 13.5px; color: var(--text-main); line-height: 1.6; margin: 0;">
-          <strong style="color: var(--primary-dark);"><i class="fa-solid fa-circle-info"></i> プール資金（出資金）を節約したい単身の方向けのオプション</strong><br>
-          単身移住でプール資金を約300万円（通常約1,800万円）に抑えたい場合、1年更新・家族帯同不可の「DT4ビザスキーム」も選択可能です。
-        </p>
       </div>
 
       <!-- Interactive Custom Simulation Accordion -->
@@ -1695,6 +1708,24 @@
         content.style.maxHeight = content.scrollHeight + 100 + 'px';
         content.style.opacity = '1';
         content.style.padding = '32px 32px 40px 32px';
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.style.maxHeight = '0px';
+        content.style.opacity = '0';
+        content.style.padding = '0 32px';
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    // Toggle Common Price Accordion
+    function toggleCommonPriceAccordion() {
+      const content = document.getElementById('common-price-content');
+      const icon = document.querySelector('#common-price-toggle-btn i.fa-chevron-down');
+      
+      if (content.style.maxHeight === '0px' || !content.style.maxHeight || content.style.maxHeight === '0') {
+        content.style.maxHeight = content.scrollHeight + 100 + 'px';
+        content.style.opacity = '1';
+        content.style.padding = '0 32px 32px 32px';
         if (icon) icon.style.transform = 'rotate(180deg)';
       } else {
         content.style.maxHeight = '0px';

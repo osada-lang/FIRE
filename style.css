@@ -1113,13 +1113,13 @@ footer .logo {
     background-size: cover;
     background-position: center;
     color: var(--white);
-    padding-top: 140px;
+    padding-top: 180px; /* 固定ヘッダーに隠れる部分とデザイン余白を考慮 */
     padding-bottom: 80px;
     height: auto;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* 上部から開始して余白を正確にコントロール */
     align-items: center;
   }
   .hero-bg-img {

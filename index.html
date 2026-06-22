@@ -209,6 +209,18 @@
                 <h4>日本食材も手に入る買い物環境</h4>
                 <p>ロッテマートなどの大型モールがあり、日本食材や日用品が手軽に入手可能。おしゃれなカフェや日本食店も充実しています。</p>              </div>
             </div>
+
+            <!-- Card 4: Education & Support -->
+            <div class="infra-card">
+              <div class="infra-card-image">
+                <img src="assets/international_school.png" alt="優れた教育・生活サポート環境">
+              </div>
+              <div class="infra-card-content">
+                <div class="infra-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h4>優れた教育・生活サポート環境</h4>
+                <p>欧米やシンガポール基準のインターナショナルスクールが充実。学校の見学同行・入学手続きから、国際病院での医療通訳、住居選定まで、当社の日本人コンシェルジュがご家族の生活基盤構築をファミリー目線で手厚くサポートします。</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -596,6 +608,22 @@
               私たちは、システム開発と並行してベトナム進出・法人設立支援事業を展開しています。日常的に動く開発インフラ（実業）と、現地でのビザ取得や会計監査のトータルサポートノウハウが揃っているため、すべての実務を安全に完全代行できます。
             </p>
           </div>
+
+          <!-- Card 3: Representative Family Concierge -->
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 32px; border-radius: var(--radius-md); border-left: 4px solid var(--accent); border-top: 1px solid rgba(255, 255, 255, 0.05); border-right: 1px solid rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; flex-direction: column; gap: 16px;">
+            <!-- Image Header -->
+            <div style="width: 100%; height: 160px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+              <img src="assets/family_support_barrier.png" alt="代表自身が自分ごととして家族移住を伴走するイメージ" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+            </div>
+            <h4 style="font-size: 18px; font-weight: 700; color: var(--white); margin: 0; display: flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-people-roof" style="color: var(--accent);"></i>
+              代表自らが「自分ごと」として伴走
+            </h4>
+            <p style="font-size: 14.5px; line-height: 1.85; color: rgba(255, 255, 255, 0.75); margin: 0;">
+              弊社代表自身も、配偶者と子供を連れて<strong>2028年7月</strong>にダナンへ移住予定です。移住準備を進める当事者として、ネットや一般の業者にはない、自分ごととして下調べしたリアルな生活環境、インター校手続き、住居選定、医療連携のリアルな情報を包み隠さずお伝えし、ご家族の移住生活をファミリー目線で強力に伴走サポートします。<br>
+              <span style="font-size: 12px; color: rgba(255, 255, 255, 0.55); line-height: 1.5; display: block; margin-top: 8px;">※本来、代表自身が移住した後に本サービスを開始するのが理想的でした。しかし、近い将来に予定されている日本の税制改正（税制改革）により、本スキーム自体が将来的に利用不可となるリスクがあるため、未利確の利益を抱えるお客様のチャンスを逃さないよう「今すぐ」に先行してこの伴走代行サービスを開始しています。</span>
+            </p>
+          </div>
         </div>
 
         <!-- Operator Introduction with Logo -->
@@ -769,10 +797,119 @@
           20年バカンスを楽しんだ手残り：<span style="font-size: 36px; text-decoration: underline; display: inline-block;">約 2 億 4,100 万円 <span style="font-size: 20px; font-weight: 800;">（日本比最大約 5.0 倍）</span></span>
         </div>
         <p style="font-size: 15px; margin: 0 auto; line-height: 1.6;">
-          <a href="#schools" style="color: var(--accent); text-decoration: underline; font-weight: 700; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 6px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--accent)'">
-            非課税複利で子供に引き継ぐ手残りは最大約5.0倍へ <i class="fa-solid fa-chevron-right" style="font-size: 12px;"></i>
-          </a>
+          <button id="compound-toggle-btn" onclick="toggleCompoundAccordion()" style="background: none; border: none; color: var(--accent); font-weight: 700; font-size: 16px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; text-decoration: underline; transition: all 0.3s ease; padding: 0; outline: none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--accent)'">
+            <span>非課税複利で子供に引き継ぐ手残りは最大約5.0倍へ (詳細シミュレーションを表示)</span> <i class="fa-solid fa-chevron-down" style="transition: transform 0.3s ease; font-size: 13px;"></i>
+          </button>
         </p>
+      </div>
+
+      <!-- Accordion Content: 20 Year Compound Simulation -->
+      <div id="compound-accordion-content" style="max-height: 0; overflow: hidden; transition: all 0.4s ease-in-out; opacity: 0; text-align: left;">
+        <div style="background: var(--white); border: 2px solid var(--primary-light); border-radius: var(--radius-lg); box-shadow: var(--shadow); padding: 48px; margin-top: 32px;">
+          
+          <div style="margin-bottom: 32px; border-bottom: 1px dashed var(--accent-soft); padding-bottom: 24px;">
+            <span style="display: inline-block; background: #fff7ed; color: #c2410c; font-size: 12px; font-weight: 800; padding: 4px 16px; border-radius: 50px; margin-bottom: 16px; letter-spacing: 1px;">生前贈与前の「非課税複利運用」という選択肢</span>
+            <h3 style="font-size: 28px; margin-bottom: 12px; color: var(--primary-dark); line-height: 1.4;">（すぐに渡すのも良いですが…）<br>非課税複利による資産最大化と、それを支えるダナン生活</h3>
+            <p style="font-size: 15.5px; color: var(--text-muted); line-height: 1.7; margin: 0;">非課税で複利運用してから生前贈与することで、資産の成長スピードは日本での運用比で圧倒的に加速。滞在期間が長いほど、手残り額に劇的な差が生まれます。</p>
+          </div>
+
+          <div class="compound-wrapper" style="margin-bottom: 32px;">
+            <!-- Left: Yacht Visual Image -->
+            <div class="compound-visual" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+              <img src="assets/asset_growth_yacht.png" alt="ダナンでのヨットセーリングと非課税複利運用" style="width: 100%; display: block;">
+            </div>
+
+            <!-- Right: Content & Comparison -->
+            <div class="compound-content" style="padding: 24px 0 0 0;">
+              <!-- シミュレーションの算出前提 -->
+              <div class="simulation-conditions" style="background: rgba(0, 180, 216, 0.03); border: 1px solid var(--accent-soft); padding: 20px 24px; border-radius: var(--radius-lg); margin-bottom: 32px; font-size: 13px; color: var(--text-main); line-height: 1.6; text-align: left;">
+                <strong style="color: var(--primary-dark); font-size: 14.5px; display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-weight: 800;">
+                  <i class="fa-solid fa-circle-info" style="color: var(--primary-light);"></i> 20年長期複利シミュレーションの算出前提
+                </strong>
+                <div class="conditions-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 32px;">
+                  <div><strong>初期元本</strong>：1億円（雑所得利確前の暗号資産）</div>
+                  <div><strong>想定利回り</strong>：年利 5.0%（複利運用）</div>
+                  <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;"><strong>日本国内での納税・運用</strong>：<br>利確時所得税（最大55%）を引いた4,500万円でスタート。毎年の運用益に分離課税（20.315%）が都度課され、20年間で合計約2,080万円の税金が徴収されます（実質的な利回りは3.98%に低下）。20年後の贈与時に贈与税（最高55%）が適用されます。</div>
+                  <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;"><strong>ダナン移住スキーム</strong>：<br>ベトナムでの利確（実質非課税）により1億円丸ごとスタート。毎年5.0%非課税複利で運用。10年ルールをクリアし、日本国内へ無税贈与（0%）。20年間の法人登記・維持総コスト約2,400万円を全額差し引き。</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="compound-grid" style="align-items: stretch; margin-bottom: 24px; gap: 24px;">
+            <!-- Scenario 2-1: Japan Compound -->
+            <div style="background: #f8f9fa; padding: 40px; border-radius: var(--radius-lg); border: 1px solid #dee2e6; display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="display: flex; flex-direction: column; height: 100%;">
+                <h3 style="color: #7a7a7a; margin-bottom: 24px; font-size: 20px; min-height: 56px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-xmark" style="color: #b33939;"></i> 日本国内で運用・贈与</h3>
+                
+                <div style="border-bottom: 2px dashed #dee2e6; padding-bottom: 20px; margin-bottom: 20px;">
+                  <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 20px;">子孫へ引き継げる最終手残り額</p>
+                  <h4 style="font-size: 22px; color: var(--text-muted); font-weight: 700; min-height: 38px; line-height: 1.2;">約 4,840 万円 <span style="font-size: 12px; font-weight: 500; color: #b33939;">(元本割れ)</span></h4>
+                </div>
+
+                <div class="simulation-detail-content" style="max-height: none; opacity: 1; display: block;">
+                  <div style="padding-top: 16px;">
+                    <div style="margin-bottom: 20px; min-height: 92px;">
+                      <p style="font-size: 14.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 38px;">1. 毎年の運用益への税金（分離課税約20%）</p>
+                      <h4 style="font-size: 26px; color: #b33939; font-weight: 800; min-height: 32px; margin: 0 0 4px 0;">約 2,080 万円</h4>
+                      <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px; min-height: 32px; line-height: 1.4;">日本の分離課税20.315%が毎年都度課税され続けます。</p>
+                    </div>
+                    <div style="margin-bottom: 20px; min-height: 105px;">
+                      <p style="font-size: 14.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 38px;">2. 生前贈与時の税金（贈与税最大55%）</p>
+                      <h4 style="font-size: 26px; color: #b33939; font-weight: 800; min-height: 32px; margin: 0 0 4px 0;">約 5,020 万円</h4>
+                      <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px; min-height: 32px; line-height: 1.4;">国内で生前贈与するため高額な贈与税が適用されます。</p>
+                    </div>
+                    <div style="margin-bottom: 20px; min-height: 92px;">
+                      <p style="font-size: 14.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 38px;">3. 20年間の運用・管理費用</p>
+                      <h4 style="font-size: 26px; color: var(--text-muted); font-weight: 800; min-height: 32px; margin: 0 0 4px 0;">0 円</h4>
+                      <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px; min-height: 32px; line-height: 1.4;">国内での自主運用のための追加の管理コスト</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Scenario 2-2: Danang 20 Year -->
+            <div style="background: var(--white); padding: 40px; border-radius: var(--radius-lg); border: 2px solid var(--primary-light); box-shadow: var(--shadow-lg); display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+              <span style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%); color: var(--white); font-size: 12px; font-weight: 800; padding: 4px 16px; border-radius: 50px; letter-spacing: 1px; white-space: nowrap;">長期・非課税FIREプラン</span>
+              <div style="display: flex; flex-direction: column; height: 100%;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 24px; font-size: 20px; min-height: 56px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--primary-light);"></i> 長期・非課税FIREプラン</h3>
+                
+                <div style="border-bottom: 2px dashed var(--accent-soft); padding-bottom: 20px; margin-bottom: 20px;">
+                  <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px; min-height: 20px;">子孫へ完全に引き継げる最終手残り額</p>
+                  <h4 style="font-size: 22px; color: var(--text-main); font-weight: 800; min-height: 38px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; line-height: 1.2;">
+                    約 <span style="font-family: 'Outfit', sans-serif; font-size: 38px; font-weight: 900; color: var(--primary); margin: 0 2px;">2</span> 億 <span style="font-family: 'Outfit', sans-serif; font-size: 38px; font-weight: 900; color: var(--primary); margin: 0 2px;">4,100</span> 万円
+                    <span style="font-size: 12.5px; font-weight: 700; background: var(--accent-soft); color: var(--primary-dark); padding: 4px 10px; border-radius: 6px; white-space: nowrap;">手残り約241.0%</span>
+                  </h4>
+                </div>
+
+                <div class="simulation-detail-content" style="max-height: none; opacity: 1; display: block;">
+                  <div style="padding-top: 16px;">
+                    <div style="margin-bottom: 20px; min-height: 92px;">
+                      <p style="font-size: 14.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 38px;">1. 利確・運用益への税金（毎年非課税複利）</p>
+                      <h4 style="font-size: 26px; color: var(--primary); font-weight: 800; min-height: 32px; margin: 0 0 4px 0;">0 円 <span style="font-size: 14px; font-weight: 500; color: var(--primary);">(非課税)</span></h4>
+                      <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px; min-height: 32px; line-height: 1.4;">毎年5.0%非課税複利で運用資産を最大化</p>
+                    </div>
+                    <div style="margin-bottom: 20px; min-height: 105px;">
+                      <p style="font-size: 14.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 38px;">2. 生前贈与時の税金（贈与税）</p>
+                      <h4 style="font-size: 26px; color: var(--primary); font-weight: 800; min-height: 32px; margin: 0 0 4px 0;">0 円 <span style="font-size: 14px; font-weight: 500; color: var(--primary);">(非課税)</span></h4>
+                      <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px; min-height: 32px; line-height: 1.4;">10年ルールをクリアし、日本国内へ無税贈与</p>
+                    </div>
+                    <div style="margin-bottom: 20px; min-height: 92px;">
+                      <p style="font-size: 14.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 38px;">3. 20年間のスキーム総費用（設立・維持・解散）</p>
+                      <h4 style="font-size: 26px; color: var(--primary-dark); font-weight: 800; min-height: 32px; margin: 0 0 4px 0;">約 2,400 万円 <span style="font-size: 12px; font-weight: 500; color: var(--text-muted);">($160,000)</span></h4>
+                      <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px; min-height: 32px; line-height: 1.4;">20年間の法人維持および管理代行費用</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: var(--bg-light); padding: 16px; border-radius: 8px; border-left: 4px solid var(--primary-light); font-size: 13.5px; font-weight: 700; color: var(--primary-dark); text-align: center; margin-top: 24px;">
+            ダナンでの豊かなリゾートライフを楽しむこと自体が、合法的な「生前贈与」の実態要件を満たしていきます。
+          </div>
+        </div>
       </div>
 
       <!-- Price Banner -->
@@ -964,7 +1101,7 @@
       <div style="margin-top: 48px; text-align: center;">
         <p style="font-size: 15px; font-weight: 700; color: var(--primary-dark); margin-bottom: 16px;">
           <i class="fa-solid fa-arrow-down" style="color: var(--primary-light); margin-right: 8px;"></i> 
-          次に、非課税複利による資産最大化と、それを支えるダナンの教育環境をご紹介します。
+          次に、FIRE移住を実現するための具体的なロードマップを確認しましょう。
         </p>
       </div>
     </div>
@@ -972,212 +1109,9 @@
 
 
 
-  <!-- Non-Tax Compound & Da Nang Life Section (Combined) -->
-  <section id="schools" style="background: var(--white);">
-    <div class="container fade-in">
-      <div class="section-title">
-        <h2>（すぐに渡すのも良いですが…）<br>非課税複利による資産最大化と、それを支えるダナン生活</h2>
-        
-      </div>
+  
 
-      <!-- Compound Interest Card -->
-      <div class="compound-wrapper">
-        <!-- Left: Yacht Visual Image -->
-        <div class="compound-visual">
-          <img src="assets/asset_growth_yacht.png" alt="ダナンでのヨットセーリングと非課税複利運用">
-        </div>
-
-        <!-- Right: Content & Comparison -->
-        <div class="compound-content" style="padding: 40px 24px 24px 24px;">
-          <span style="display: inline-block; align-self: flex-start; background: #fff7ed; color: #c2410c; font-size: 12px; font-weight: 800; padding: 4px 16px; border-radius: 50px; margin-bottom: 16px; letter-spacing: 1px;">生前贈与前の「非課税複利運用」という選択肢</span>
-          <h3 style="font-size: 28px; margin-bottom: 12px; color: var(--primary-dark); line-height: 1.4;">非課税複利で子供に引き継ぐ手残りは最大約5.0倍へ</h3>
-          <p style="font-size: 16px; color: var(--text-muted); margin-bottom: 24px; line-height: 1.8;">非課税で複利運用してから生前贈与することで、資産の成長スピードは日本での運用比で圧倒的に加速。滞在期間が長いほど、手残り額に劇的な差が生まれます。</p>
-          
-          <!-- スマホ用アコーディオンボタン (PCでは非表示) -->
-          <button class="show-on-mobile accordion-btn" onclick="toggleAccordion('simulation-assumptions')">
-            <i class="fa-solid fa-calculator"></i> シミュレーションの算出前提を表示する (+ クリックで開閉)
-          </button>
-          <!-- Simulation Assumptions (前提条件) -->
-          <div id="simulation-assumptions" class="accordion-content">
-            <div class="simulation-conditions" style="background: rgba(0, 180, 216, 0.03); border: 1px solid var(--accent-soft); padding: 20px 24px; border-radius: var(--radius-lg); margin-bottom: 32px; font-size: 13px; color: var(--text-main); line-height: 1.6; text-align: left;">
-              <strong style="color: var(--primary-dark); font-size: 14.5px; display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-weight: 800;">
-                <i class="fa-solid fa-circle-info" style="color: var(--primary-light);"></i> 20年長期複利シミュレーションの算出前提
-              </strong>
-              <div class="conditions-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 32px;">
-                <div><strong>初期元本</strong>：1億円（雑所得利確前の暗号資産）</div>
-                <div><strong>想定利回り</strong>：年利 5.0%（複利運用）</div>
-                <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;"><strong>日本国内での納税・運用</strong>：<br>利確時所得税（最大55%）を引いた4,500万円でスタート。毎年の運用益に分離課税（20.315%）が都度課され、20年間で合計約2,080万円の税金が徴収されます（実質的な利回りは3.98%に低下）。20年後の贈与時に贈与税（最高55%）が適用されます。</div>
-                <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;"><strong>ダナン移住スキーム</strong>：<br>ベトナムでの利確（実質非課税）により1億円丸ごとスタート。毎年5.0%非課税複利で運用。10年ルールをクリアし、日本国内へ無税贈与（0%）。20年間の法人登記・維持総コスト約2,400万円を全額差し引き。</div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="compound-grid" style="align-items: stretch; margin-bottom: 24px;">
-            <!-- Scenario 2-1: Japan Compound -->
-            <div style="background: #f8f9fa; padding: 48px; border-radius: var(--radius-lg); border: 1px solid #dee2e6; display: flex; flex-direction: column; justify-content: space-between;">
-              <div style="display: flex; flex-direction: column; height: 100%;">
-                <h3 style="color: #7a7a7a; margin-bottom: 24px; font-size: 22px; min-height: 56px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-xmark" style="color: #b33939;"></i> 日本国内で運用・贈与</h3>
-                
-                <div style="border-bottom: 2px dashed #dee2e6; padding-bottom: 20px; margin-bottom: 20px;">
-                  <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 20px;">子孫へ引き継げる最終手残り額</p>
-                  <h4 style="font-size: 22px; color: var(--text-muted); font-weight: 700; min-height: 38px; line-height: 1.2;">約 4,840 万円 <span style="font-size: 12px; font-weight: 500; color: #b33939;">(元本割れ)</span></h4>
-                </div>
-
-                <div class="simulation-detail-content">
-                  <div style="padding-top: 16px;">
-                    <div style="margin-bottom: 20px; min-height: 92px;">
-                      <p style="font-size: 14.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 38px;">1. 毎年の運用益への税金（分離課税約20%）</p>
-                      <h4 style="font-size: 26px; color: #b33939; font-weight: 800; min-height: 32px; margin: 0 0 4px 0;">約 2,080 万円</h4>
-                      <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px; min-height: 32px; line-height: 1.4;">日本の分離課税20.315%が毎年都度課税され続けます。</p>
-                    </div>
-                    <div style="margin-bottom: 20px; min-height: 105px;">
-                      <p style="font-size: 14.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 38px;">2. 生前贈与時の税金（贈与税最大55%）</p>
-                      <h4 style="font-size: 26px; color: #b33939; font-weight: 800; min-height: 32px; margin: 0 0 4px 0;">約 5,020 万円</h4>
-                      <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px; min-height: 32px; line-height: 1.4;">国内で生前贈与するため高額な贈与税が適用されます。</p>
-                    </div>
-                    <div style="margin-bottom: 20px; min-height: 92px;">
-                      <p style="font-size: 14.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 38px;">3. 20年間の運用・管理費用</p>
-                      <h4 style="font-size: 26px; color: var(--text-muted); font-weight: 800; min-height: 32px; margin: 0 0 4px 0;">0 円</h4>
-                      <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px; min-height: 32px; line-height: 1.4;">国内での自主運用のための追加の管理コスト</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <button class="simulation-detail-btn gray-btn" style="margin-top: auto;" onclick="toggleSimAccordion(this)">
-                  <span>内訳の詳細を見る</span> <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </div>
-            </div>
-
-            <!-- Scenario 2-2: Danang 20 Year -->
-            <div style="background: var(--white); padding: 48px; border-radius: var(--radius-lg); border: 2px solid var(--primary-light); box-shadow: var(--shadow-lg); display: flex; flex-direction: column; justify-content: space-between; position: relative;">
-              <span style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%); color: var(--white); font-size: 12px; font-weight: 800; padding: 4px 16px; border-radius: 50px; letter-spacing: 1px; white-space: nowrap;">長期・非課税FIREプラン</span>
-              <div style="display: flex; flex-direction: column; height: 100%;">
-                <h3 style="color: var(--primary-dark); margin-bottom: 24px; font-size: 22px; min-height: 56px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--primary-light);"></i> 長期・非課税FIREプラン</h3>
-                
-                <div style="border-bottom: 2px dashed var(--accent-soft); padding-bottom: 20px; margin-bottom: 20px;">
-                  <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px; min-height: 20px;">子孫へ完全に引き継げる最終手残り額</p>
-                  <h4 style="font-size: 22px; color: var(--text-main); font-weight: 800; min-height: 38px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; line-height: 1.2;">
-                    約 <span style="font-family: 'Outfit', sans-serif; font-size: 38px; font-weight: 900; color: var(--primary); margin: 0 2px;">2</span> 億 <span style="font-family: 'Outfit', sans-serif; font-size: 38px; font-weight: 900; color: var(--primary); margin: 0 2px;">4,100</span> 万円
-                    <span style="font-size: 12.5px; font-weight: 700; background: var(--accent-soft); color: var(--primary-dark); padding: 4px 10px; border-radius: 6px; white-space: nowrap;">手残り約241.0%</span>
-                  </h4>
-                </div>
-
-                <div class="simulation-detail-content">
-                  <div style="padding-top: 16px;">
-                    <div style="margin-bottom: 20px; min-height: 92px;">
-                      <p style="font-size: 14.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 38px;">1. 利確・運用益への税金（毎年非課税複利）</p>
-                      <h4 style="font-size: 26px; color: var(--primary); font-weight: 800; min-height: 32px; margin: 0 0 4px 0;">0 円 <span style="font-size: 14px; font-weight: 500; color: var(--primary);">(非課税)</span></h4>
-                      <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px; min-height: 32px; line-height: 1.4;">毎年5.0%非課税複利で運用資産を最大化</p>
-                    </div>
-                    <div style="margin-bottom: 20px; min-height: 105px;">
-                      <p style="font-size: 14.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 38px;">2. 生前贈与時の税金（贈与税）</p>
-                      <h4 style="font-size: 26px; color: var(--primary); font-weight: 800; min-height: 32px; margin: 0 0 4px 0;">0 円 <span style="font-size: 14px; font-weight: 500; color: var(--primary);">(非課税)</span></h4>
-                      <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px; min-height: 32px; line-height: 1.4;">10年ルールをクリアし、日本国内へ無税贈与</p>
-                    </div>
-                    <div style="margin-bottom: 20px; min-height: 92px;">
-                      <p style="font-size: 14.5px; color: var(--text-muted); margin-bottom: 4px; min-height: 38px;">3. 20年間のスキーム総費用（設立・維持・解散）</p>
-                      <h4 style="font-size: 26px; color: var(--primary-dark); font-weight: 800; min-height: 32px; margin: 0 0 4px 0;">約 2,400 万円 <span style="font-size: 12px; font-weight: 500; color: var(--text-muted);">($160,000)</span></h4>
-                      <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px; min-height: 32px; line-height: 1.4;">20年間の法人維持および管理代行費用</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <button class="simulation-detail-btn" style="margin-top: auto;" onclick="toggleSimAccordion(this)">
-                  <span>内訳の詳細を見る</span> <i class="fa-solid fa-chevron-down"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div style="background: var(--bg-light); padding: 16px; border-radius: 8px; border-left: 4px solid var(--primary-light); font-size: 13.5px; font-weight: 700; color: var(--primary-dark); text-align: center; margin-top: auto;">
-            ダナンでの豊かなリゾートライフを楽しむこと自体が、合法的な「生前贈与」の実態要件を満たしていきます。
-          </div>
-        </div>
-      </div>
-
-      <!-- School & Lifestyle Section -->
-      <div style="margin-top: 60px;">
-        <div class="school-intro-wrapper">
-          <div class="school-intro-content">
-            <div style="display: inline-block; align-self: flex-start; background: var(--primary-dark); color: var(--white); font-size: 11px; font-weight: 800; padding: 4px 12px; border-radius: 50px; margin-bottom: 16px; letter-spacing: 1px;">EDUCATION & ENVIRONMENT</div>
-            <h3 style="font-size: 24px; color: var(--primary-dark); margin-bottom: 16px; line-height: 1.4;"><i class="fa-solid fa-graduation-cap" style="color: var(--primary-light); margin-right: 8px;"></i>お子様の教育を支える優れたインターナショナルスクール</h3>
-            <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7; margin-bottom: 0;">
-              ダナンには欧米やシンガポール基準の優れたインター校が充実。見学同行から手続きまで、当社の現地コンシェルジュがフルサポートします。
-            </p>
-          </div>
-          <div class="school-intro-image">
-            <img src="assets/international_school.png" alt="お子様の教育を支える優れたインターナショナルスクール">
-          </div>
-        </div>
-
-        <div class="schools-grid" style="margin-top: 32px;">
-          <!-- SIS -->
-          <div class="school-card">
-            <div>
-              <span style="display: inline-block; background: #e0f2fe; color: #0369a1; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 50px; margin-bottom: 16px;">🇸🇬 シンガポール＋国際バカロレア</span>
-              <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--primary-dark);">SIS (Singapore International School)</h3>
-              <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 16px;"><i class="fa-solid fa-location-dot"></i> 南部リゾートエリア（ココベイ近く）</p>
-              <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 24px;">実績のある定番校。シンガポール式・ケンブリッジ式をベースに、国際バカロレア（IB）も選択可能です。</p>
-            </div>
-            <div style="border-top: 1px solid var(--accent-soft); padding-top: 16px; font-size: 13px;">
-              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; color: var(--text-main);"><strong>対象学年:</strong> <span>幼稚園 〜 高校</span></div>
-              <div style="display: flex; justify-content: space-between; color: var(--primary); font-weight: 700;"><strong>年間学費目安:</strong> <span>約 $10,000 〜 $20,000</span></div>
-            </div>
-          </div>
-
-          <!-- APU -->
-          <div class="school-card">
-            <div>
-              <span style="display: inline-block; background: #fef3c7; color: #b45309; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 50px; margin-bottom: 16px;">🇺🇸 アメリカン・カリキュラム</span>
-              <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--primary-dark);">APU American School</h3>
-              <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 16px;"><i class="fa-solid fa-location-dot"></i> 南部教育区（FPTシティ近く）</p>
-              <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 24px;">米国進学に強いスクール。英語補習クラス（ESL）が充実しており、初めての留学でも安心です。</p>
-            </div>
-            <div style="border-top: 1px solid var(--accent-soft); padding-top: 16px; font-size: 13px;">
-              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; color: var(--text-main);"><strong>対象学年:</strong> <span>幼稚園 〜 高校</span></div>
-              <div style="display: flex; justify-content: space-between; color: var(--primary); font-weight: 700;"><strong>年間学費目安:</strong> <span>約 $10,000 〜 $18,000</span></div>
-            </div>
-          </div>
-
-          <!-- St. Nicholas -->
-          <div class="school-card">
-            <div>
-              <span style="display: inline-block; background: #ecfdf5; color: #047857; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 50px; margin-bottom: 16px;">🇺🇸 米国式・都市型スクール</span>
-              <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--primary-dark);">St. Nicholas School</h3>
-              <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 16px;"><i class="fa-solid fa-location-dot"></i> ダナン中心部（ハン川西側）</p>
-              <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 24px;">中心部にあり通学に便利な都市型インター校。米国式カリキュラムを採用し、比較的リーズナブルな学費も魅力です。</p>
-            </div>
-            <div style="border-top: 1px solid var(--accent-soft); padding-top: 16px; font-size: 13px;">
-              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; color: var(--text-main);"><strong>対象学年:</strong> <span>幼稚園 〜 高校</span></div>
-              <div style="display: flex; justify-content: space-between; color: var(--primary); font-weight: 700;"><strong>年間学費目安:</strong> <span>約 $8,000 〜 $15,000</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Concierge Support Box -->
-      <div class="concierge-box">
-        <div style="flex: 1;">
-          <h4 style="font-size: 20px; color: var(--primary-dark); margin-bottom: 16px;"><i class="fa-solid fa-handshake-angle" style="color: var(--primary-light);"></i> 親子でのダナン暮らしを、私たちが「ファミリー目線」で伴走します</h4>
-          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 16px;">自身も配偶者ビザで子供を連れてダナンへ移住予定（または滞在中）の日本人ファミリーコンサルタントが現地でサポート。ネットや一般の業者にはない、実体験に基づくリアルな生活情報やトラブル対策を提供します。</p>
-          <p style="font-size: 14px; color: var(--text-muted);">住居選定、インター校の現地見学同行・願書手続きから、<strong>日本と同等レベルの高度な医療サービスが受けられる外国人向け国際病院（Vinmec国際病院やFamily Hospital国際クリニック等）の受診・緊急通訳同行、およびキャッシュレス海外保険の手配</strong>まで、10年以上の滞在を最後まで快適に過ごせるよう、ご家族の生活基盤構築をフルマネージドで支援します。</p>
-        </div>
-        <div style="width: 240px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--white); padding: 24px; border-radius: var(--radius); border: 1px solid var(--glass-border); box-shadow: var(--shadow);" class="hide-on-mobile">
-          <i class="fa-solid fa-house-chimney-user" style="font-size: 48px; color: var(--primary); margin-bottom: 12px;"></i>
-          <h5 style="font-size: 15px; font-weight: 700; color: var(--primary-dark); margin-bottom: 4px;">ダナン移住生活</h5>
-          <p style="font-size: 12px; color: var(--text-muted);">教育・住居・生活の<br>フル伴走コンシェルジュ</p>
-        </div>
-      </div>
-
-      <div style="margin-top: 48px; text-align: center;">
-        <p style="font-size: 15px; font-weight: 700; color: var(--primary-dark); margin-bottom: 16px;">
-          <i class="fa-solid fa-arrow-down" style="color: var(--primary-light); margin-right: 8px;"></i> 
-          このロードマップをスムーズに進めるための、具体的な3ステップとは？
-        </p>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- Plans Section -->
   <section id="flow" style="background: var(--bg-light);">
@@ -2027,6 +1961,24 @@
         details.style.marginTop = '0px';
         if (icon) icon.style.transform = 'rotate(0deg)';
         if (textSpan) textSpan.textContent = '対応内容と詳細を見る';
+      }
+    }
+
+    // Toggle compound interest simulation accordion details
+    function toggleCompoundAccordion() {
+      const content = document.getElementById('compound-accordion-content');
+      const icon = document.querySelector('#compound-toggle-btn i.fa-chevron-down');
+      
+      if (content.style.maxHeight === '0px' || !content.style.maxHeight || content.style.maxHeight === '0') {
+        content.style.maxHeight = content.scrollHeight + 100 + 'px';
+        content.style.opacity = '1';
+        content.style.marginTop = '24px';
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.style.maxHeight = '0px';
+        content.style.opacity = '0';
+        content.style.marginTop = '0px';
+        if (icon) icon.style.transform = 'rotate(0deg)';
       }
     }
   </script>

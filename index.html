@@ -141,7 +141,7 @@
         <!-- Scenario 1-1: Japan Tax -->
         <div style="background: #f8f9fa; padding: 40px; border-radius: var(--radius-lg); border: 1px solid #dee2e6; display: flex; flex-direction: column; justify-content: space-between;">
           <div style="display: flex; flex-direction: column; height: 100%;">
-            <h3 style="color: #7a7a7a; margin-bottom: 16px; font-size: 20px; min-height: 56px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-xmark" style="color: #b33939;"></i> 日本国内で利確・贈与</h3>
+            <h3 style="color: #7a7a7a; margin-bottom: 16px; font-size: 20px; min-height: 56px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-xmark" style="color: #b33939;"></i> 日本でそのまま（スキーム使用なし）</h3>
             
             <div style="background: #f1f3f5; border: 1px solid #e9ecef; border-left: 5px solid #6c757d; border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 24px; text-align: left;">
               <p style="font-size: 13.5px; color: var(--text-muted); font-weight: 700; margin: 0 0 8px 0;">子孫へ引き継げる最終手残り額</p>
@@ -282,14 +282,32 @@
           
           <!-- シミュレーションの算出前提 -->
           <div class="simulation-conditions" style="background: rgba(0, 180, 216, 0.03); border: 1px solid var(--accent-soft); padding: 24px 32px; border-radius: var(--radius-lg); margin-bottom: 32px; font-size: 13.5px; color: var(--text-main); line-height: 1.6; text-align: left;">
-            <strong style="color: var(--primary-dark); font-size: 15px; display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-weight: 800;">
+            <strong style="color: var(--primary-dark); font-size: 15px; display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-weight: 800;">
               <i class="fa-solid fa-circle-info" style="color: var(--primary-light);"></i> 20年長期複利シミュレーションの算出前提
             </strong>
-            <div class="conditions-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px 32px;">
+            
+            <div class="conditions-params" style="display: flex; flex-wrap: wrap; gap: 12px 40px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px dashed var(--accent-soft); font-size: 13.5px;">
               <div><strong>初期元本</strong>：1億円（雑所得利確前の暗号資産）</div>
               <div><strong>想定利回り</strong>：年利 5.0%（複利運用）</div>
-              <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;"><strong>日本国内での納税・運用</strong>：<br>利確時所得税・住民税（累進課税＋一律10%）を引いた約4,980万円でスタート。毎年の運用益に分離課税（20.315%）が都度課され、20年間で合計約2,345万円の税金が徴収されます（実質的な利回りは3.98%に低下）。20年後の贈与時に贈与税（特例贈与税率、基礎控除110万円適用）が適用されます。</div>
-              <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;"><strong>ダナン移住スキーム</strong>：<br>ベトナムでの利確（実質非課税）により1億円元本スタート。毎年5.0%非課税複利で運用。10年ルールをクリアし、日本国内へ無税贈与（0%）。20年間の法人登記・維持総コスト約2,400万円を全額差し引き。</div>
+            </div>
+            
+            <div class="conditions-scenarios" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; align-items: stretch;">
+              <div style="background: var(--white); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--accent-soft); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+                <strong style="color: #b33939; display: flex; align-items: center; gap: 6px; font-size: 13.5px; margin-bottom: 10px; font-weight: 800;">
+                  <i class="fa-solid fa-circle-xmark" style="color: #b33939;"></i> 日本国内での納税・運用
+                </strong>
+                <p style="font-size: 12px; color: var(--text-muted); margin: 0; line-height: 1.6; flex-grow: 1;">
+                  利確時所得税・住民税（累進課税＋一律10%）を引いた約4,980万円でスタート。毎年の運用益に分離課税（20.315%）が都度課され、20年間で合計約2,345万円の税金が徴収されます（実質的な利回りは3.98%に低下）。20年後の贈与時に贈与税（特例贈与税率、基礎控除110万円適用）が適用されます。
+                </p>
+              </div>
+              <div style="background: var(--white); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--accent-soft); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+                <strong style="color: var(--primary); display: flex; align-items: center; gap: 6px; font-size: 13.5px; margin-bottom: 10px; font-weight: 800;">
+                  <i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> ダナン移住スキーム
+                </strong>
+                <p style="font-size: 12px; color: var(--text-muted); margin: 0; line-height: 1.6; flex-grow: 1;">
+                  ベトナムでの利確（実質非課税）により1億円元本スタート。毎年5.0%非課税複利で運用。10年ルールをクリアし、日本国内へ無税贈与（0%）。20年間の法人登記・維持総コスト約2,400万円を全額差し引き。
+                </p>
+              </div>
             </div>
           </div>
 
@@ -297,7 +315,7 @@
             <!-- Scenario 2-1: Japan Compound -->
             <div style="background: #f8f9fa; padding: 40px; border-radius: var(--radius-lg); border: 1px solid #dee2e6; display: flex; flex-direction: column; justify-content: space-between;">
               <div style="display: flex; flex-direction: column; height: 100%;">
-                <h3 style="color: #7a7a7a; margin-bottom: 24px; font-size: 20px; min-height: 56px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-xmark" style="color: #b33939;"></i> 日本国内で運用・贈与</h3>
+                <h3 style="color: #7a7a7a; margin-bottom: 24px; font-size: 20px; min-height: 56px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-circle-xmark" style="color: #b33939;"></i> 日本でそのまま（スキーム使用なし / 20年運用）</h3>
                 
                 <div style="background: #f1f3f5; border: 1px solid #e9ecef; border-left: 5px solid #6c757d; border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 24px; text-align: left;">
                   <p style="font-size: 13.5px; color: var(--text-muted); font-weight: 700; margin: 0 0 8px 0;">子孫へ引き継げる最終手残り額</p>
@@ -476,7 +494,7 @@
               <div>
                 <h4 style="font-size: 15px; font-weight: 800; color: #7a7a7a; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
                   <i class="fa-solid fa-circle-xmark" style="color: #b33939;"></i>
-                  <span>日本国内でそのまま</span>
+                  <span>日本でそのまま（スキーム使用なし）</span>
                 </h4>
                 <div style="border-bottom: 1px dashed #dee2e6; padding-bottom: 12px; margin-bottom: 12px;">
                   <p style="font-size: 11px; color: var(--text-muted); margin-bottom: 4px;">最終手残り額</p>

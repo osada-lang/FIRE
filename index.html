@@ -277,12 +277,16 @@
       </div>
 
       <!-- Result Bar (20 Year Long-term Impact) -->
-      <div style="position: relative; background: linear-gradient(rgba(10, 34, 64, 0.85), rgba(10, 34, 64, 0.85)), url('assets/asset_growth_yacht.png') no-repeat center center / cover; color: var(--white); padding: 48px 32px; border-radius: var(--radius-lg); text-align: center; box-shadow: var(--shadow); margin-top: 48px; overflow: hidden;">
-        <h3 style="color: var(--white); font-size: 22px; margin-bottom: 8px; font-weight: 800; position: relative; z-index: 2;">
-          <i class="fa-solid fa-gem"></i> 長期滞在すればするほどお得、「長期・非課税FIREプラン」
+      <div style="position: relative; background: linear-gradient(135deg, rgba(13, 37, 72, 0.72) 0%, rgba(5, 15, 33, 0.88) 100%), url('assets/asset_growth_yacht.png') no-repeat center center / cover; color: var(--white); padding: 64px 32px 48px 32px; border-radius: var(--radius-lg); text-align: center; border: 3px solid #f59e0b; box-shadow: 0 25px 60px rgba(245, 158, 11, 0.35), 0 0 35px rgba(245, 158, 11, 0.15), var(--shadow); margin-top: 48px; overflow: visible;">
+        <!-- Top absolute-positioned Premium Badge -->
+        <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffb703 0%, #fb8500 100%); color: #03045e; font-size: 12px; font-weight: 900; padding: 6px 24px; border-radius: 50px; letter-spacing: 1px; white-space: nowrap; box-shadow: 0 4px 15px rgba(251,133,0,0.5); z-index: 3;">
+          👑 最上位・究極の非課税複利プラン
+        </span>
+        <h3 style="color: var(--white); font-size: 24px; margin-bottom: 12px; font-weight: 900; position: relative; z-index: 2; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">
+          <i class="fa-solid fa-gem" style="color: #ffb703;"></i> 長期滞在すればするほどお得、「長期・非課税FIREプラン」
         </h3>
         <div style="margin: 20px 0; position: relative; z-index: 2;">
-          <div style="background: rgba(255, 255, 255, 0.08); border: 2px solid rgba(245, 158, 11, 0.6); box-shadow: 0 0 20px rgba(245, 158, 11, 0.25); border-radius: var(--radius-md); padding: 24px 32px; display: inline-block; width: 90%; max-width: 800px; text-align: center; box-sizing: border-box;">
+          <div style="background: rgba(255, 255, 255, 0.06); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 2px solid rgba(245, 158, 11, 0.7); box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 0 20px rgba(245, 158, 11, 0.2); border-radius: var(--radius-md); padding: 24px 32px; display: inline-block; width: 90%; max-width: 800px; text-align: center; box-sizing: border-box;">
             <span style="font-size: 15px; font-weight: 700; color: rgba(255, 255, 255, 0.85); display: block; margin-bottom: 8px; letter-spacing: 0.05em;">20年バカンスを楽しんだ最終手残り額</span>
             <div style="font-size: 26px; font-weight: 900; color: #f59e0b; line-height: 1.2;">
               約 <span style="font-family: 'Outfit', sans-serif; font-size: 44px; font-weight: 900; color: #f59e0b; text-shadow: 0 2px 10px rgba(245,158,11,0.2); margin: 0 2px;">2</span> 億 <span style="font-family: 'Outfit', sans-serif; font-size: 44px; font-weight: 900; color: #f59e0b; text-shadow: 0 2px 10px rgba(245,158,11,0.2); margin: 0 2px;">4,133</span> 万円
@@ -291,8 +295,10 @@
           </div>
         </div>
         <p style="font-size: 15px; margin: 0 auto; line-height: 1.6; position: relative; z-index: 2;">
-          <button id="compound-toggle-btn" onclick="toggleCompoundAccordion()" style="background: none; border: none; color: var(--accent); font-weight: 700; font-size: 16px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; text-decoration: underline; transition: all 0.3s ease; padding: 0; outline: none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--accent)'">
-            <span>非課税複利で子供に引き継ぐ手残りは最大約4.3倍へ (詳細シミュレーションを表示)</span> <i class="fa-solid fa-chevron-down" style="transition: transform 0.3s ease; font-size: 13px;"></i>
+          <button id="compound-toggle-btn" onclick="toggleCompoundAccordion()" style="background: rgba(255, 255, 255, 0.1); border: 1.5px solid rgba(255, 255, 255, 0.25); color: var(--white); font-weight: 800; font-size: 15px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.3s ease; padding: 12px 28px; border-radius: 50px; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.15); margin-top: 12px; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);" onmouseover="this.style.background='rgba(255,255,255,0.2)'; this.style.borderColor='rgba(255,255,255,0.5)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(255,255,255,0.25)'; this.style.transform='translateY(0)';">
+            <i class="fa-solid fa-chart-line" style="color: #ffb703; font-size: 16px;"></i>
+            <span>非課税複利で子供に引き継ぐ手残りは最大約4.3倍へ (詳細シミュレーションを表示)</span>
+            <i class="fa-solid fa-chevron-down" style="transition: transform 0.3s ease; font-size: 13px; color: #ffb703;"></i>
           </button>
         </p>
       </div>

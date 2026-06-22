@@ -21,7 +21,7 @@
         <ul>
           <li><a href="#uniqueness">スキーム説明</a></li>
           <li><a href="#simulation">効果シミュレーション</a></li>
-          <li><a href="#plans">サービスプラン</a></li>
+          <li><a href="#flow">移住ロードマップ</a></li>
           <li><a href="#tour">現地視察ツアー</a></li>
         </ul>
       </nav>
@@ -42,7 +42,7 @@
         </h1>
         <p>「利確したいけれど税金が高すぎる…」と悩む必要はもうありません。ダナンでの極上リゾートライフを楽しみながら、面倒な現地法人の運営や手続きはジラーチがすべて丸ごと代行します。</p>
         <div class="cta-group">
-          <a href="#plans" class="btn-primary">プランを比較する</a>
+          <a href="#flow" class="btn-primary">ロードマップを見る</a>
           <a href="#interactive-simulator-accordion" class="btn-secondary" onclick="openSimulator(event)">簡易シミュレーション</a>
         </div>
       </div>
@@ -775,6 +775,42 @@
         </p>
       </div>
 
+      <!-- Price Banner -->
+      <div class="common-price-banner" style="margin-top: 56px; margin-bottom: 24px;">
+        <div class="price-header">全パッケージ共通 料金・基本要件</div>
+        <div class="price-details">
+          <div class="price-item">
+            <span class="price-label">プラン初期費用</span>
+            <div class="price-value">300<span class="price-unit">万円</span></div>
+            <span class="price-tax">（税込）</span>
+          </div>
+          <div class="price-item">
+            <span class="price-label">月額運用代行費用</span>
+            <div class="price-value">$500<span class="price-unit">/月</span></div>
+            <span class="price-tax">（フルマネージド）</span>
+          </div>
+          <div class="price-item">
+            <span class="price-label">基本ビザ</span>
+            <div class="price-value">DT3</div>
+            <span class="price-tax">（家族帯同可 / 3年ごと更新・半永久滞在可）</span>
+          </div>
+          <div class="price-item">
+            <span class="price-label">必要プール資金（出資金）</span>
+            <div class="price-value">約1,800<span class="price-unit">万円</span></div>
+            <span class="price-tax">（30億VND以上・経費差引後返還）</span>
+          </div>
+        </div>
+        <div class="price-badge">共通要件</div>
+      </div>
+
+      <!-- DT4 Note -->
+      <div style="margin-bottom: 48px; background: rgba(0, 180, 216, 0.05); border: 1px solid var(--accent-soft); padding: 20px 24px; border-radius: var(--radius-lg); text-align: left; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <p style="font-size: 13.5px; color: var(--text-main); line-height: 1.6; margin: 0;">
+          <strong style="color: var(--primary-dark);"><i class="fa-solid fa-circle-info"></i> プール資金（出資金）を節約したい単身の方向けのオプション</strong><br>
+          単身移住でプール資金を約300万円（通常約1,800万円）に抑えたい場合、1年更新・家族帯同不可の「DT4ビザスキーム」も選択可能です。
+        </p>
+      </div>
+
       <!-- Interactive Custom Simulation Accordion -->
       <div id="interactive-simulator-accordion" style="margin-top: 48px; border: 1px solid var(--accent); border-radius: var(--radius-lg); overflow: hidden; background: var(--white); box-shadow: var(--shadow); text-align: left;">
         <button id="simulator-toggle-btn" style="width: 100%; padding: 24px 32px; background: rgba(0, 119, 182, 0.04); border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left; transition: var(--transition);" onclick="toggleInteractiveSimulator()">
@@ -1208,14 +1244,53 @@
               <div class="exit-card">
                 <h5><i class="fa-solid fa-plane-arrival"></i> 3年・資産利確プラン</h5>
                 <p>3年間の居住実態と非課税利確を完了し、手残りを最大化した状態で日本へ帰国します。</p>
+                <button class="exit-card-toggle" onclick="toggleExitCard(this)">
+                  <span>対応内容と詳細を見る</span> <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="exit-card-details">
+                  <ul class="plan-features" style="margin-top: 16px; margin-bottom: 0; padding-top: 16px; border-top: 1px dashed var(--accent-soft); text-align: left;">
+                    <li>外資100% 1人有限会社（LLC）の設立</li>
+                    <li>DT3 投資家ビザおよび3年居住カード（TRC）取得</li>
+                    <li>法人・個人銀行口座開設サポート</li>
+                    <li>暗号資産の合法的な現地利確＆口座着金対策</li>
+                    <li>毎月の事業実態運用代行（フルマネージド）</li>
+                    <li>3年後の法人解散・出資金返還サポート</li>
+                  </ul>
+                </div>
               </div>
               <div class="exit-card">
                 <h5><i class="fa-solid fa-gift"></i> 10年・生前贈与プラン</h5>
                 <p>ベトナムの贈与税0%を活かし、10年ルールに基づき次世代へ無税で資産を移転します。</p>
+                <button class="exit-card-toggle" onclick="toggleExitCard(this)">
+                  <span>対応内容と詳細を見る</span> <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="exit-card-details">
+                  <ul class="plan-features" style="margin-top: 16px; margin-bottom: 0; padding-top: 16px; border-top: 1px dashed var(--accent-soft); text-align: left;">
+                    <li>外資100% 1人有限会社（LLC）の設立</li>
+                    <li>DT3 投資家ビザおよび3年居住カード（TRC）の維持更新</li>
+                    <li><strong>生前贈与「10年ルール（贈与税0%）」の対策基盤</strong></li>
+                    <li>配偶者・子供の帯同ビザ（TTビザ/TRC）取得</li>
+                    <li>毎月の事業実態運用代行（フルマネージド）</li>
+                    <li>ベトナム国内での合法的な無税贈与手続きサポート</li>
+                  </ul>
+                </div>
               </div>
               <div class="exit-card">
                 <h5><i class="fa-solid fa-palm-tree"></i> 長期・非課税FIREプラン</h5>
                 <p>法人と居住カードを維持し、現地での非課税複利運用とリゾートライフを長期的に永続します。</p>
+                <button class="exit-card-toggle" onclick="toggleExitCard(this)">
+                  <span>対応内容と詳細を見る</span> <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="exit-card-details">
+                  <ul class="plan-features" style="margin-top: 16px; margin-bottom: 0; padding-top: 16px; border-top: 1px dashed var(--accent-soft); text-align: left;">
+                    <li>外資100% 1人有限会社（LLC）の設立</li>
+                    <li>DT3 投資家ビザおよび3年居住カード（TRC）の維持更新</li>
+                    <li><strong>非課税での長期複利運用（年利5%想定）</strong></li>
+                    <li>配偶者・子供の帯同ビザ（TTビザ/TRC）取得</li>
+                    <li>毎月の事業実態運用代行（フルマネージド）</li>
+                    <li>ダナンでの永住サポート・教育（インター校）医療支援</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -1228,115 +1303,13 @@
       <div style="margin-top: 48px; text-align: center;">
         <p style="font-size: 15px; font-weight: 700; color: var(--primary-dark); margin-bottom: 16px;">
           <i class="fa-solid fa-arrow-down" style="color: var(--primary-light); margin-right: 8px;"></i> 
-          ご状況に合わせて選べる、3つの移住支援パッケージはこちら。
-        </p>
-      </div>
-    </div>
-  </section>
-
-  
-
-  
-
-  <!-- FAQ Section -->
-  <section id="plans" style="background: var(--bg-light);">
-    <div class="container fade-in">
-      <div class="section-title">
-        <h2>選べる3つの移住支援パッケージ</h2>
-        
-      </div>
-
-      <!-- Price Banner -->
-      <div class="common-price-banner">
-        <div class="price-header">全パッケージ共通 料金・基本要件</div>
-        <div class="price-details">
-          <div class="price-item">
-            <span class="price-label">プラン初期費用</span>
-            <div class="price-value">300<span class="price-unit">万円</span></div>
-            <span class="price-tax">（税込）</span>
-          </div>
-          <div class="price-item">
-            <span class="price-label">月額運用代行費用</span>
-            <div class="price-value">$500<span class="price-unit">/月</span></div>
-            <span class="price-tax">（フルマネージド）</span>
-          </div>
-          <div class="price-item">
-            <span class="price-label">基本ビザ</span>
-            <div class="price-value">DT3</div>
-            <span class="price-tax">（家族帯同可 / 3年ごと更新・半永久滞在可）</span>
-          </div>
-          <div class="price-item">
-            <span class="price-label">必要プール資金（出資金）</span>
-            <div class="price-value">約1,800<span class="price-unit">万円</span></div>
-            <span class="price-tax">（30億VND以上・経費差引後返還）</span>
-          </div>
-        </div>
-        <div class="price-badge">共通要件</div>
-      </div>
-
-      <div class="plans-wrapper">
-        <!-- Plan 1: 3-Year Cashout -->
-        <div class="plan-card">
-          <span class="plan-badge">非課税利確・帰国</span>
-          <h3>3年・資産利確プラン</h3>
-          <p class="plan-duration">短期〜中期滞在（ビザ更新：3年）</p>
-          <ul class="plan-features">
-            <li>外資100% 1人有限会社（LLC）の設立</li>
-            <li>DT3 投資家ビザおよび3年居住カード（TRC）取得</li>
-            <li>法人・個人銀行口座開設サポート</li>
-            <li>暗号資産の合法的な現地利確＆口座着金対策</li>
-            <li>毎月の事業実態運用代行（フルマネージド）</li>
-            <li>3年後の法人解散・出資金返還サポート</li>
-          </ul>
-        </div>
-
-        <!-- Plan 2: 10-Year Inheritance -->
-        <div class="plan-card featured">
-          <span class="plan-badge">資産の無税生前贈与</span>
-          <h3>10年・生前贈与プラン</h3>
-          <p class="plan-duration">中期〜長期滞在（ビザ更新：3年ごと）</p>
-          <ul class="plan-features">
-            <li>外資100% 1人有限会社（LLC）の設立</li>
-            <li>DT3 投資家ビザおよび3年居住カード（TRC）の維持更新</li>
-            <li><strong>生前贈与「10年ルール（贈与税0%）」の対策基盤</strong></li>
-            <li>配偶者・子供の帯同ビザ（TTビザ/TRC）取得</li>
-            <li>毎月の事業実態運用代行（フルマネージド）</li>
-            <li>ベトナム国内での合法的な無税贈与手続きサポート</li>
-          </ul>
-        </div>
-
-        <!-- Plan 3: Long-term FIRE -->
-        <div class="plan-card">
-          <span class="plan-badge">南国での非課税FIRE</span>
-          <h3>長期・非課税FIREプラン</h3>
-          <p class="plan-duration">長期滞在（ビザ更新：3年ごと）</p>
-          <ul class="plan-features">
-            <li>外資100% 1人有限会社（LLC）の設立</li>
-            <li>DT3 投資家ビザおよび3年居住カード（TRC）の維持更新</li>
-            <li><strong>非課税での長期複利運用（年利5%想定）</strong></li>
-            <li>配偶者・子供の帯同ビザ（TTビザ/TRC）取得</li>
-            <li>毎月の事業実態運用代行（フルマネージド）</li>
-            <li>ダナンでの永住サポート・教育（インター校）医療支援</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- DT4 Note -->
-      <div style="margin-top: 32px; background: rgba(0, 180, 216, 0.05); border: 1px solid var(--accent-soft); padding: 20px 24px; border-radius: var(--radius-lg); text-align: left; max-width: 900px; margin-left: auto; margin-right: auto;">
-        <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 0;">
-          <strong style="color: var(--primary-dark);"><i class="fa-solid fa-circle-info"></i> プール資金（出資金）を節約したい単身の方向けのオプション</strong><br>
-          単身移住でプール資金を約300万円（通常約1,800万円）に抑えたい場合、1年更新・家族帯同不可の「DT4ビザスキーム」も選択可能です。
-        </p>
-      </div>
-
-      <div style="margin-top: 48px; text-align: center;">
-        <p style="font-size: 15px; font-weight: 700; color: var(--primary-dark); margin-bottom: 16px;">
-          <i class="fa-solid fa-arrow-down" style="color: var(--primary-light); margin-right: 8px;"></i> 
           まずは現地を見てみたい方へ、全額キャッシュバック特典付きの視察ツアーはこちら。
         </p>
       </div>
     </div>
   </section>
+
+
 
   <!-- Tour Divider Section -->
   <section id="tour-divider" style="background: url('assets/danang_beach_resort.png') no-repeat center center/cover; padding: 120px 0; text-align: center; position: relative; overflow: hidden; z-index: 1;">
@@ -2033,6 +2006,28 @@
           if (textSpan) textSpan.textContent = '内訳の詳細を見る';
         }
       });
+    }
+
+    // Toggle exit strategy card accordion details
+    function toggleExitCard(btn) {
+      const details = btn.nextElementSibling;
+      const icon = btn.querySelector('i');
+      const textSpan = btn.querySelector('span');
+      const isOpening = details.style.maxHeight === '0px' || !details.style.maxHeight || details.style.maxHeight === '0';
+      
+      if (isOpening) {
+        details.style.maxHeight = details.scrollHeight + 'px';
+        details.style.opacity = '1';
+        details.style.marginTop = '16px';
+        if (icon) icon.style.transform = 'rotate(180deg)';
+        if (textSpan) textSpan.textContent = '詳細を閉じる';
+      } else {
+        details.style.maxHeight = '0px';
+        details.style.opacity = '0';
+        details.style.marginTop = '0px';
+        if (icon) icon.style.transform = 'rotate(0deg)';
+        if (textSpan) textSpan.textContent = '対応内容と詳細を見る';
+      }
     }
   </script>
 </body>

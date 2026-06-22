@@ -1842,7 +1842,40 @@ footer .logo {
   font-size: 14.5px;
   color: var(--text-muted);
   line-height: 1.6;
+  margin-bottom: 0;
 }
+
+/* Exit Card Accordion styles */
+.exit-card-toggle {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  margin-top: 16px;
+  transition: var(--transition);
+}
+
+.exit-card-toggle:hover {
+  color: var(--primary-dark);
+}
+
+.exit-card-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.exit-card-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out, opacity 0.3s ease, margin-top 0.3s ease;
+  opacity: 0;
+}
+
 
 /* FAQ Section */
 .faq-container {

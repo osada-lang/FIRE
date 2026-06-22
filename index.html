@@ -548,8 +548,8 @@
             </div>
 
             <!-- Result Card 3: Danang 10-Year -->
-            <div style="background: var(--white); border: 2px solid var(--primary-light); box-shadow: var(--shadow-sm); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; justify-content: space-between; position: relative;">
-              <span style="position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%); color: var(--white); font-size: 10px; font-weight: 800; padding: 2px 10px; border-radius: 50px; white-space: nowrap;">相続プラン</span>
+            <div id="sim-card-dn10" style="background: var(--white); border: 2px solid var(--primary-light); box-shadow: var(--shadow-sm); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; justify-content: space-between; position: relative; transition: all 0.3s ease;">
+              <span id="sim-card-dn10-badge" style="position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%); color: var(--white); font-size: 10px; font-weight: 800; padding: 2px 10px; border-radius: 50px; white-space: nowrap; transition: all 0.3s ease;">相続プラン</span>
               <div>
                 <h4 style="font-size: 15px; font-weight: 800; color: var(--primary-dark); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
                   <i class="fa-solid fa-circle-check" style="color: var(--primary-light);"></i>
@@ -568,6 +568,14 @@
               </div>
               <div style="background: var(--accent-soft); padding: 8px 12px; border-radius: var(--radius-sm); font-size: 11px; font-weight: 700; color: var(--primary-dark); text-align: center; margin-top: 10px;">
                 日本比：<span id="res-dn10-diff" style="font-size: 12.5px; font-weight: 900; color: var(--primary);">+0 円</span> 手残り増
+              </div>
+              
+              <!-- Gray-out overlay when inheritance checkbox is unchecked -->
+              <div id="sim-card-dn10-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(248, 249, 250, 0.85); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px); display: flex; align-items: center; justify-content: center; border-radius: var(--radius); opacity: 0; pointer-events: none; transition: all 0.3s ease; z-index: 10; padding: 20px; box-sizing: border-box; text-align: center;">
+                <span style="color: var(--text-muted); font-weight: 800; font-size: 13px; line-height: 1.5; background: var(--white); border: 1.5px dashed #ced4da; padding: 16px; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); width: 90%;">
+                  <i class="fa-solid fa-ban" style="color: #adb5bd; font-size: 18px; margin-bottom: 8px; display: block;"></i>
+                  相続・贈与なしのため<br><span style="color: var(--primary-dark);">シミュレーション不要</span>
+                </span>
               </div>
             </div>
 
@@ -1980,6 +1988,42 @@
       document.getElementById('res-dn20-rate').textContent = formatPercent(dn20Net, X);
       document.getElementById('res-dn20-diff').textContent = formatYen(dn20Net - jp20Net);
       document.getElementById('res-jp20-net').textContent = formatYen(jp20Net);
+
+      // Inheritance Toggle Card Style (Danang 10-Year Card with Overlay)
+      const dn10Card = document.getElementById('sim-card-dn10');
+      const dn10Badge = document.getElementById('sim-card-dn10-badge');
+      const dn10Overlay = document.getElementById('sim-card-dn10-overlay');
+      if (dn10Card) {
+        if (isInheritance) {
+          dn10Card.style.borderColor = 'var(--primary-light)';
+          dn10Card.style.borderWidth = '2px';
+          dn10Card.style.boxShadow = 'var(--shadow-sm)';
+          dn10Card.style.background = 'var(--white)';
+          dn10Card.style.opacity = '1';
+          dn10Card.style.pointerEvents = 'auto';
+          if (dn10Badge) {
+            dn10Badge.style.background = 'linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%)';
+          }
+          if (dn10Overlay) {
+            dn10Overlay.style.opacity = '0';
+            dn10Overlay.style.pointerEvents = 'none';
+          }
+        } else {
+          dn10Card.style.borderColor = '#dee2e6';
+          dn10Card.style.borderWidth = '1px';
+          dn10Card.style.boxShadow = 'none';
+          dn10Card.style.background = '#f8f9fa';
+          dn10Card.style.opacity = '0.55';
+          dn10Card.style.pointerEvents = 'none';
+          if (dn10Badge) {
+            dn10Badge.style.background = '#adb5bd';
+          }
+          if (dn10Overlay) {
+            dn10Overlay.style.opacity = '1';
+            dn10Overlay.style.pointerEvents = 'auto';
+          }
+        }
+      }
     }
 
     // Toggle simulation details accordion

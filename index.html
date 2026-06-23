@@ -1581,19 +1581,20 @@
 
       <div class="contact-wrapper" style="max-width: 700px; margin: 0 auto;">
         <!-- Contact Form -->
-        <form class="contact-form" id="consultation-form" style="width: 100%;">
+        <form class="contact-form" id="consultation-form" style="width: 100%;" name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact">
           <h4 style="margin-bottom: 20px; text-align: center;"><i class="fa-solid fa-envelope"></i> 相談お申し込みフォーム</h4>
           <div class="form-group">
             <label for="name">お名前（必須）<span style="font-size: 11px; color: var(--text-muted); font-weight: normal; margin-left: 8px;">※仮名やニックネームでも可能です</span></label>
-            <input type="text" id="name" required placeholder="例：ダナン太郎（ニックネーム可）">
+            <input type="text" id="name" name="name" required placeholder="例：ダナン太郎（ニックネーム可）">
           </div>
           <div class="form-group">
             <label for="email">メールアドレス（必須）</label>
-            <input type="email" id="email" required placeholder="example@email.com">
+            <input type="email" id="email" name="email" required placeholder="example@email.com">
           </div>
           <div class="form-group">
             <label for="selected-plan">お問い合わせ内容</label>
-            <select id="selected-plan">
+            <select id="selected-plan" name="selected-plan">
               <option value="tour">視察ツアーについて</option>
               <option value="simulation">金額シミュレーションについて</option>
               <option value="inquiry">まずは話を聞いてみる</option>
@@ -1601,7 +1602,7 @@
           </div>
           <div class="form-group">
             <label for="message">ご相談内容・ご質問など</label>
-            <textarea id="message" rows="4" placeholder="ご希望内容の詳細や、現在の資産規模、移住の希望時期など、可能な範囲でご記入ください。"></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="ご希望内容の詳細や、現在の資産規模、移住の希望時期など、可能な範囲でご記入ください。"></textarea>
           </div>
           <button type="submit" class="btn-submit">この内容で相談を申し込む</button>
         </form>
@@ -1675,7 +1676,7 @@
       });
     });
 
-    // Dummy Form Submission
+    // Form Submission (Netlify AJAX submit)
     const form = document.getElementById('consultation-form');
     form.addEventListener('submit', function(e) {
       e.preventDefault();
@@ -1688,8 +1689,30 @@
       } else if (selectedPlan === 'inquiry') {
         planName = "まずは話を聞いてみる";
       }
-      alert(`【${planName}】へのお問い合わせ・ご相談ありがとうございます。ご入力いただいたメールアドレス宛てに、2営業日以内にダナン在住のファミリーコンシェルジュより、オンライン事前相談のご案内を差し上げます。`);
-      form.reset();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "contact",
+          "name": name,
+          "email": email,
+          "selected-plan": selectedPlan,
+          "message": message
+        }).toString()
+      })
+      .then(() => {
+        alert(`【${planName}】へのお問い合わせ・ご相談ありがとうございます。ご入力いただいたメールアドレス宛てに、2営業日以内にダナン在住のファミリーコンシェルジュより、オンライン事前相談のご案内を差し上げます。`);
+        form.reset();
+      })
+      .catch(error => {
+        console.error("Submission error:", error);
+        alert("送信中にエラーが発生しました。インターネット接続を確認の上、再度お試しください。");
+      });
     });
 
     // FAQ Accordion

@@ -1113,8 +1113,8 @@ footer .logo {
     background-size: cover;
     background-position: center;
     color: var(--white);
-    padding-top: 180px; /* 固定ヘッダーに隠れる部分とデザイン余白を考慮 */
-    padding-bottom: 80px;
+    padding-top: 180px !important; /* 固定ヘッダーに隠れる部分とデザイン余白を考慮 */
+    padding-bottom: 80px !important;
     height: auto;
     min-height: 100vh;
     display: flex;
